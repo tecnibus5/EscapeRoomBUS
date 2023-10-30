@@ -14,7 +14,7 @@ Al presionar un botón de la pantalla, se debe pausar el juego y mostrar por enc
 
 ### Elegir una acción
 
-Tras leer el contexto de la historia, aparecen las acciones disponibles en dos columnas. El jugador puede escribir la palabra o palabras clave resaltadas para seleccionar la acción. Si escribe algo incoherente o fuera del rango de acciones, se debe mostrar un error genérico o específico para la escena o acción concreta.
+Tras leer el contexto de la historia, aparecen las acciones disponibles en dos columnas si son opciones fijas o nada si es algo que se espera que el jugador averigüe. El jugador puede escribir la palabra o palabras clave resaltadas para seleccionar la acción. Si escribe algo incoherente o fuera del rango de acciones, se debe mostrar un error genérico o específico para la escena o acción concreta.
 
 ### Inicio del juego
 
@@ -29,7 +29,6 @@ Hay que especificar qué estado se corresponde con un fin de juego.
 ## Diagrama de componentes
 
 ```mermaid
-
 graph TB 
     text["#171;Componente#187;<br/>
     Textos del juego"]
@@ -42,10 +41,15 @@ graph TB
 
     subgraph Historia
         story -->|busca|text
+        story -->|define|config
         config
     end
     logic -->|carga|story
     logic -->|inicializa con|config
     logic -->|carga|text
-
 ```
+
+* Textos del juego: fichero txt que contiene un párrafo de texto por línea.
+* Estructura de la historia: archivo JSON que define una estructura de tipo grafo dirigido sobre las escenas de la historia.
+* Configuración del juego: archivo JSON que especifica la escena inicial y qué escenas son fines de juego.
+* Motor del juego: componente que carga en orden los estados del juego, recibe las acciones del usuario y decide cómo avanzar.
