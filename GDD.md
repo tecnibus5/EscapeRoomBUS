@@ -34,22 +34,43 @@ graph TB
     Textos del juego"]
     story["#171;Componente#187;<br/>
     Estructura de la historia"]
-    config["#171;Componente#187;<br/>
-    Configuración del juego"]
     logic["#171;Componente#187;<br/>
     Motor del juego"]
 
     subgraph Historia
         story -->|busca|text
-        story -->|define|config
-        config
     end
     logic -->|carga|story
-    logic -->|inicializa con|config
     logic -->|carga|text
 ```
 
 * Textos del juego: fichero txt que contiene un párrafo de texto por línea.
 * Estructura de la historia: archivo JSON que define una estructura de tipo grafo dirigido sobre las escenas de la historia.
-* Configuración del juego: archivo JSON que especifica la escena inicial y qué escenas son fines de juego.
 * Motor del juego: componente que carga en orden los estados del juego, recibe las acciones del usuario y decide cómo avanzar.
+
+## Estructura de datos
+
+### Fichero de texto
+
+Se trata de un fichero txt en el cual cada línea es un párrafo de la historia. Es importante que cada fila sea un párrafo porque el número de la línea es el identificador del párrafo.
+
+### Fichero JSON de escenas
+
+Este fichero contiene el orden de las escenas dentro del juego. Cada escena cuenta con una estructura definida:
+```JSON
+{
+    "id":"#número",
+    "tipo": "INICIAL/ACCION/FINAL",
+    "textos":[líneaX,líneaY,...]
+    "acciones": {
+        "acción1": "#siguienteEscena",
+        "acción2": "#siguienteEscena",
+        ...
+    }
+    "error": líneaErrorGenéricoDeLaEscena
+}
+```
+
+Si la única acción de una escena ACCION es "" (vacía), entonces se trata de una escena AUTOMÁTICA, y solo se necesita que el usuario pulse enter para continuar.
+
+Cada una de las escenas se recoge dentro de un array, que luego será leído por el motor del juego.
