@@ -7,16 +7,13 @@ Eres un investigador de la Universidad de Sevilla que está trabajando en la vac
 ## Escena 0A1
 Game Over: El director de la editorial Pay4Books se ha adueñado de tu investigación y la ha publicado bajo el nombre de la editorial.
 
-## Escena 0A1
+## Escena 0A2
 Game Over: El director de la editorial no ha podido hacerse con el control de tu investigación, pero no la has publicado en Ciencia Abierta y como nadie la podrá leer pasará desapercibida para la comunidad científica.
 
 ## Escena 0B
-Respuesta incorrecta: Vuélvelo a intentar.
-
-## Escena 0C
 No encuentras nada.
 
-## Escena 0D
+## Escena 0C
 El director de la editorial parece que te ha leído la mente y está a punto de atraparte.
 
 ## Escena 1
@@ -33,6 +30,8 @@ Decides:
 
 > Rechazar (#2)
 
+Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
+
 
 ## Escena 2
 
@@ -40,17 +39,28 @@ Decides:
 
 Al pulsar el botón de encendido el ordenador te pide la contraseña de tu usuario para iniciar sesión. ¡Vaya! Justo la cambiaste ayer y no eres capaz de recordar cuál era. Menos mal que la apuntaste en una tarjeta publicitaria y la guardaste en uno de los cajones del escritorio. Decides mirar en:
 
-> Cajón derecho. (#0C)
+> Cajón derecho. (#0B)
 
 > Cajón izquierdo. (#3)
+
+Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
+
+## Escena 2A
+Ayer guardaste la tarjeta en uno de los cajones del escritorio pero no la has visto en el cajón derecho. Esta vez decides mirar en:
+
+> Cajón derecho. (#0B)
+
+> Cajón izquierdo. (#3)
+
+Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
 
 ## Escena 3
 
 ¡Ahí estaba! Sacas la tarjeta y observas las diferentes letras que tiene escritas. ¿Cuál será el código?
 
-> Introducir código incorrecto (#0B)
-
 > 8/16 (#4)
+
+Error: Contraseña incorrecta
 
 ## Escena 4
 
@@ -68,9 +78,9 @@ Coges tus cosas y decides salir corriendo en dirección a la Universidad. Allí 
 
 ¿Con qué servicio de la Universidad de Sevilla tendrá Alba que ponerse en contacto?
 
-> Introducir respuesta incorrecta (#0B)
-
 > Biblioteca (#5)
+
+Error: El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas.
 
 ## Escena 5
 A los pocos minutos recibes una llamada a tu teléfono: es Alba, que ya ha hablado con la Biblioteca de la Universdad de Sevilla y ha recibido toda la información que necesitas. 
@@ -80,9 +90,9 @@ Acto seguido finaliza la llamada telefónica y recibes en tu teléfono la direcc
 
 ¿Cuántas comunidades diferentes podemos encontrar en idUS?
 
-> Respuesta incorrecta (#0B)
-
 > 6 (#6)
+
+Error: El director de la editorial golpea más fuerte la puerta; creo que ese no es el número correcto.
 
 ## Escena 6
 Usando el Depósito de Investigación de la Universidad de Sevilla podrás conseguir no solo tener una mayor visibilidad, uso e impacto, sino que obtendrás mayor reconocimiento como autor, al ser más difundido y citado, garantizando además la preservación de tu investigación.
@@ -91,9 +101,20 @@ De repente  se escucha un ruido muy fuerte proveniente de la puerta: ¡es el dir
 
 ¡Rápido! ¿Qué decides hacer?
 
-> Esconderte debajo de la mesa. (#0D)
+> Esconderte debajo de la mesa. (#0C)
 
 > Salir corriendo por la puerta. (#7)
+
+Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
+
+## Escena 6A
+¡Rápido! ¿Qué decides hacer?
+
+> Esconderte debajo de la mesa. (#0A1)
+
+> Salir corriendo por la puerta. (#7)
+
+Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
 
 ## Escena 7
 Consigues salir por la puerta y te diriges a toda velocidad a la Biblioteca de la Universidad más cercana. Allí te permitirán entregar el resultado de todos tus años de investigación y podrás publicarlo en Ciencia Abierta antes de que el director de la editorial te atrape.
@@ -104,7 +125,43 @@ Nada más llegar a la biblioteca, solicitas uno de los portátiles de préstamo 
 
 > Creative Commons (#8)
 
+Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
+
 ## Escena 8
 Justo al pulsar el botón de enviar aparece el director de la editorial por la puerta. Intenta abalanzarte sobre ti pero ya es demasiado tarde: el resultado de tu investigación está ya publicado bajo una licencia Creative Comons que permite copiar, reproducir, distribuir y comunicar públicamente la obra, siempre y cuando se citen y reconozcan a los autores originales. No se permite, sin embargo, utilizar esta obra para fines comerciales ni la creación de obras derivadas de la misma.
 
 ¡Enhorabuena! Has publicado tu investigación con éxito y has derrotado al malvado director de la editorial Pay4Books.
+
+
+
+
+# Diagrama de escenas
+
+```mermaid
+graph TD
+    1 --> 0A1:(0A1 Game Over 1)
+    1 --> 2
+    2 --> 0B
+    2 --> 3
+    0B --> 2A
+    2A --> 0B
+    2A --> 3
+    3 --> 4
+    4 --> 5
+    5 --> 6
+    6 --> 0C
+    6 --> 7
+    0C --> 6A
+    6A --> 0A1:(0A1 Game Over 1)
+    6A --> 7
+    7 --> 0A2:(0A2 Game Over 2)
+    7 --> 8(8 FIN)
+```
+
+
+
+
+
+
+
+
