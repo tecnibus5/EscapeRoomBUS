@@ -2,18 +2,38 @@
 
 async function load_scenes() {
     return fetch('../config/cfg.json')
-    .then((response) => response.json())
+    .then((response) => {
+        if (!response.ok) {
+            return null;
+        } else {
+            return response.json();
+        }
+    })
     .then((json) => {
-        return json;
-    });
+        if (json == null) {
+            return null;
+        } else {
+            return json;
+        }
+    })
 }
 
 async function load_texts() {
-    return fetch('../Textos.txt')
-    .then((response) => response.text())
+    return fetch('../assets/txt/textos.txt')
+    .then((response) => {
+        if (!response.ok) {
+            return null;
+        } else {
+            return response.text();
+        }
+    })
     .then((text) => {
-        return text.split("\r\n");
-    });
+        if (text == null) {
+            return null;
+        } else {
+            return text.split("\n");
+        }
+    })
 }
 
 function load_initial_scene(scenes) {
@@ -54,6 +74,11 @@ async function main() {
     const scenes = await load_scenes();
     const texts = await load_texts();
 
+    if (scenes == null || texts == null) {
+        alert("No se han encontrado los archivos de juego en el servidor");
+        return 0;
+    }
+
     let gameOver = false;
     let currentScene = load_initial_scene(scenes);
 
@@ -70,4 +95,6 @@ async function main() {
             console.log(currentScene.error);
         }
     }
+
+    return 0;
 }
