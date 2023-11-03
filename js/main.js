@@ -43,13 +43,14 @@ function load_initial_scene(scenes) {
 }
 
 function render_text(scene,texts) {
+    let gameScreen = document.getElementById('game');
     for(line of scene.textos) {
-        console.log(texts[line-1]);
+        gameScreen.insertAdjacentHTML('beforeend',`<div class="text-style game-text">${texts[line-1]}</div>`);
     }
 }
 
 function wait_for_input() {
-    let action = prompt();
+    let gameInput = document.getElementById('game-input');
     return action.toUpperCase();
 }
 
@@ -76,6 +77,8 @@ function is_auto_scene(scene) {
 }
 
 async function main() {
+    document.getElementById('boton-bonito-wrapper').remove();
+
     const scenes = await load_scenes();
     const texts = await load_texts();
 
