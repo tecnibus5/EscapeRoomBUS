@@ -37,14 +37,9 @@ async function load_texts() {
 }
 
 function load_initial_scene(scenes) {
-    let initial_scene = null;
-    scenes.forEach(element => {
-        if (element.tipo === "INICIAL") {
-            initial_scene = element;
-        }
-    });
-    console.assert(initial_scene != null);
-    return initial_scene;
+    let initial_scene = scenes.filter(s => s.tipo === "INICIAL");
+    console.assert(initial_scene.length > 0);
+    return initial_scene[0];
 }
 
 function render_text(scene,texts) {
@@ -59,15 +54,25 @@ function wait_for_input() {
 }
 
 function check_valid_action(action,scene) {
-    const actionsObject = Object.keys(scene.acciones);
-    if (actionsObject.length === 1 && actionsObject[0] === "") {
+    const actionsArray = Object.keys(scene.acciones);
+    if (is_auto_scene(scene) || actionsArray.includes(action)) {
         return true;
-    } else {
-        if (actionsObject.includes(action)) {
-            return true;
-        }
     }
     return false;
+}
+
+function get_next_scene(scene,action) {
+    if (is_auto_scene(scene)) {
+        return scene.acciones[""];
+    }
+    return scene.acciones[action];
+}
+
+function is_auto_scene(scene) {
+    const actionsArray = Object.keys(scene.acciones);
+    if (actionsArray.length === 1 && actionsArray[0] === "") {
+        return true;
+    }
 }
 
 async function main() {
@@ -81,17 +86,21 @@ async function main() {
 
     let gameOver = false;
     let currentScene = load_initial_scene(scenes);
+    let errorState = false;
 
-    while (gameOver == false) {
-        render_text(currentScene,texts);
+    while (!gameOver) {
+        if (!errorState) render_text(currentScene,texts);
+        errorState = false;
         let chosenAction = wait_for_input();
         if (check_valid_action(chosenAction,currentScene)) {
-            currentScene = scenes.filter(s => s.id === currentScene.acciones[chosenAction])[0];
+            let nextScene = get_next_scene(currentScene,chosenAction);
+            currentScene = scenes.filter(s => s.id === nextScene)[0];
             if (currentScene.tipo === "FINAL") {
                 gameOver = true;
                 render_text(currentScene,texts);
             }
         } else {
+            errorState = true;
             console.log(currentScene.error);
         }
     }
