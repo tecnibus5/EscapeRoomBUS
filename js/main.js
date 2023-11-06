@@ -37,21 +37,8 @@ async function load_texts() {
 }
 
 function load_initial_scene(scenes) {
-    let initial_scene = scenes.filter(s => s.tipo === "INICIAL");
-    console.assert(initial_scene.length > 0);
-    return initial_scene[0];
-}
-
-function render_text(scene,texts) {
-    let gameScreen = document.getElementById('game');
-    for(line of scene.textos) {
-        gameScreen.insertAdjacentHTML('beforeend',`<div class="text-style game-text">${texts[line-1]}</div>`);
-    }
-}
-
-function wait_for_input() {
-    let gameInput = document.getElementById('game-input');
-    return action.toUpperCase();
+    let initial_scene = scenes.find(s => s.tipo === "INICIAL");
+    return initial_scene;
 }
 
 function check_valid_action(action,scene) {
@@ -78,7 +65,6 @@ function is_auto_scene(scene) {
 
 async function main() {
     document.getElementById('boton-bonito-wrapper').remove();
-
     const scenes = await load_scenes();
     const texts = await load_texts();
 
@@ -87,26 +73,38 @@ async function main() {
         return 0;
     }
 
-    let gameOver = false;
+    let gameInput = document.getElementById('game-input');
+    let gameScreen = document.getElementById('game');
     let currentScene = load_initial_scene(scenes);
-    let errorState = false;
 
-    while (!gameOver) {
-        if (!errorState) render_text(currentScene,texts);
-        errorState = false;
-        let chosenAction = wait_for_input();
-        if (check_valid_action(chosenAction,currentScene)) {
-            let nextScene = get_next_scene(currentScene,chosenAction);
-            currentScene = scenes.filter(s => s.id === nextScene)[0];
-            if (currentScene.tipo === "FINAL") {
-                gameOver = true;
-                render_text(currentScene,texts);
-            }
-        } else {
-            errorState = true;
-            console.log(currentScene.error);
+    gameInput.addEventListener('keyup', function(e) {
+        if(e.key === 'Enter') {
+            handle_user_input(e.target.value);
+            e.target.value = '';
+        }
+    })
+
+    render_text(currentScene)
+
+    function render_text(scene) {
+        for(line of scene.textos) {
+            gameScreen.insertAdjacentHTML('beforeend',`<div class="text-style game-text">${texts[line-1]}</div>`);
         }
     }
 
-    return 0;
+    function handle_user_input(input) {
+        let action = input.trim().toUpperCase();
+        if (check_valid_action(action,currentScene)) {
+            let nextScene = get_next_scene(currentScene,action);
+            currentScene = scenes.find(s => s.id === nextScene);
+            gameScreen.innerHTML = '';
+            render_text(currentScene,texts);
+            if (currentScene.tipo === "FINAL") {
+                gameInput.disabled = true;
+            }
+        } else {
+            gameScreen.insertAdjacentHTML('beforeend',`<span class="text-style">${currentScene.error}</span>`)
+        }
+    }
+
 }
