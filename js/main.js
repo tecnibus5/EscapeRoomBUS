@@ -98,6 +98,7 @@ async function main() {
             let nextScene = get_next_scene(currentScene,action);
             currentScene = scenes.find(s => s.id === nextScene);
             gameScreen.innerHTML = '';
+            gameScreen.scrollTo(0,0);
             render_text(currentScene,texts);
             if (currentScene.tipo === "FINAL") {
                 gameInput.disabled = true;

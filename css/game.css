@@ -10,25 +10,24 @@ html, body {
 
 .game-bg-wrapper {
     width: clamp(360px,100vw,1080px);
+    max-height: 100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: 16/9;
 }
 
 .game-bg {
-    aspect-ratio: 16/9;
     background-color: var(--dark-color);
     position: relative;
-
     padding: 12px;
+    height: 100%;
     
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
     gap: 5%;
-}
-
-.game-text {
-
 }
 
 .text-style {
@@ -48,8 +47,14 @@ html, body {
     outline: 0;
 }
 
+#game {
+    scroll-behavior: smooth;
+}
+
 #game-input-div {
+    width: 100%;
     background-color: var(--dark-color);
+    border-top: 2px solid #cccccc;
     display: flex;
 }
 
