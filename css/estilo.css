@@ -1,0 +1,153 @@
+/* Estilos para el contenedor general */
+.contenedor {
+    display: flex; /* Utilizamos un contenedor flexible para alinear las columnas */
+}
+
+#segundo {
+    margin-top: 36px;
+}
+
+/* Estilos para cada columna */
+.columna {
+    flex-grow: 1; /* Cada columna ocupa un tercio del espacio disponible */
+    padding: 20px; /* Agrega espaciado para separar el contenido */
+    border: 0px solid #ccc; /* Opcional: Agrega un borde para separar visualmente las columnas */
+}
+
+#principal {
+    flex-grow: 5;
+}
+#lateral {
+    flex-grow: 1;
+}
+#logo {
+    flex-grow: 1;
+    align-items: center;
+}
+#equis {
+    flex-grow: 0;
+}
+
+#logo img {
+    width: 80%;
+}
+.columna_encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.columna_lupa {
+    position: relative;
+}
+
+#lupa {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+}
+
+.barra_busqueda {
+    width: 200px;              /* Ancho de 150 píxeles */
+    height: 30px;          /* Alto de 20 píxeles */
+    background: #FEE9B2;        /* Fondo de color naranja */
+    border: 1px solid #000; /* Borde color negro y de 1 píxel de grosor */
+}
+.cambio_idioma_espanol {
+    width: 100px;              /* Ancho de 150 píxeles */
+    height: 30px;          /* Alto de 20 píxeles */
+    background: rgb(245, 174, 22);        /* Fondo de color naranja */
+    border: 1px solid #FFF; /* Borde color blanco y de 1 píxel de grosor */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #777 ;
+    font-family: 'Lato',sans-serif;
+}
+.cambio_idioma_english {
+    width: 100px;              /* Ancho de 150 píxeles */
+    height: 30px;          /* Alto de 20 píxeles */
+    background: white;        /* Fondo de color naranja */
+    border: 1px solid #FFF; /* Borde color blanco y de 1 píxel de grosor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777 ;
+    font-family: 'Lato',sans-serif;
+}
+
+.cartelitos {
+    color: #777 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato',sans-serif;
+}
+
+.cartelitos_abajo {
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato',sans-serif;
+}
+
+.juego {
+    width: 1100px;           /* Ancho de 800 píxeles */
+    height: 750px;          /* Alto de 500 píxeles */
+    background-color: #1b1b1b;
+}
+
+.cuadrado_amarillo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 40px;
+}
+
+.barra_amarilla {
+    position: relative;
+    flex-grow: 10;
+    width: 80%;
+    height: 100px;
+    background-color: #ffc425;
+    font-family: 'Lato',sans-serif;
+    color: #ffffff ;
+    font-size: 20px;
+    display: flex;
+}
+
+.barra_clarita {
+    position: relative;
+    flex-grow: 1;
+    width: 10%;
+    height: 100px;
+    background-color: #ffd051;
+    display: flex;
+    font-family: 'Lato',sans-serif;
+    color: #ffffff ;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra_oscurita {
+    position: relative;
+    flex-grow: 1;
+    width: 10%;
+    height: 100px;
+    background-color: #2e2e2e;
+    display: flex;
+}
+
+.barra_roja {
+    width: 100%;
+    height: 12px;
+    background-color: #8d1905;
+}
