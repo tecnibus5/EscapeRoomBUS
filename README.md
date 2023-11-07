@@ -108,12 +108,12 @@ graph TD
 
 # Sinopsis de la historia
 
-Eres un investigador de la Universidad de Sevilla que está trabajando en la vacuna contra el cáncer de mama. Un día, decides contar con la ayuda de una editorial para publicar su investigación, pero la editorial Pay4Books solo está interesada en ganar dinero a costa de tu esfuerzo. ¿Conseguirás deshacerse del tirano que dirige la editorial y publicar su investigación en abierto?
+Eres un investigador de la Universidad de Sevilla que está trabajando en la vacuna contra el cáncer de mama. Un día, decides contar con la ayuda de una editorial para publicar su investigación, pero la editorial Pay&Pay solo está interesada en ganar dinero a costa de tu esfuerzo. ¿Conseguirás deshacerse del tirano que dirige la editorial y publicar su investigación en abierto?
 
 
 # Desarrollo de la historia por escenas
 ## Escena 0A1
-Game Over: El director de la editorial Pay4Books se ha adueñado de tu investigación y la ha publicado bajo el nombre de la editorial.
+Game Over: El director de la editorial Pay&Pay se ha adueñado de tu investigación y la ha publicado bajo el nombre de la editorial.
 
 ## Escena 0A2
 Game Over: El director de la editorial no ha podido hacerse con el control de tu investigación, pero no la has publicado en Ciencia Abierta y como nadie la podrá leer pasará desapercibida para la comunidad científica.
@@ -122,15 +122,15 @@ Game Over: El director de la editorial no ha podido hacerse con el control de tu
 No encuentras nada.
 
 ## Escena 0C
-El director de la editorial parece que te ha leído la mente y está a punto de atraparte.
+El director de la editorial parece que te ha leído la mente y está a punto de atraparte. (#13A)
 
 ## Escena 1
 
 Eres un investigador de la Universidad de Sevilla que está trabajando en la vacuna contra el cáncer de mama. No tienes apenas recursos ni nadie que colabore contigo, pero tu intuición te dice que vas por buen camino. Para continuar con tu investigación, te planteas solicitar ayuda a una editorial.
 
-La editorial Pay4Books se da cuenta de que tu investigación es brillante y que podría llegar lejos con tu estudio, por lo que decide ayudarte. Ese mismo día por la tarde, recibes un mensaje en tu teléfono móvil de la editorial con el contrato que debes firmar:
+La editorial Pay&Pay se da cuenta de que tu investigación es brillante y que podría llegar lejos con tu estudio, por lo que decide ayudarte. Ese mismo día por la tarde, recibes un mensaje en tu teléfono móvil de la editorial con el contrato que debes firmar:
 
-"El investigador acuerda ceder todos los derechos de autor y beneficios económicos generados por el artículo de investigación a la editorial Pay4Books. Pay4Books tendrá exclusividad en la comercialización y distribución del artículo, y el escritor renuncia a cualquier participación en las ganancias derivadas de su venta."
+"El investigador acuerda ceder todos los derechos de autor y beneficios económicos generados por el artículo de investigación a la editorial Pay&Pay. Pay&Pay tendrá exclusividad en la comercialización y distribución del artículo, y el escritor renuncia a cualquier participación en las ganancias derivadas de su venta."
 
 Decides:
 
@@ -164,13 +164,158 @@ Error: No entiendo lo que dices, tienes que escribir una de las opciones mostrad
 
 ## Escena 3
 
-¡Ahí estaba! Sacas la tarjeta y observas las diferentes letras que tiene escritas. ¿Cuál será el código?
+¡Ahí estaba! Sacas la tarjeta y lees el texto que tiene escrito:
 
-> 8/16 (#4)
+"La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños".
 
-Error: Contraseña incorrecta
+Vamos primero a ver qué hora marca el reloj.
+
+> Ir a la cocina (#3A)
+
+> Ir al recibidor (#4)
+
+Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
+
+
+## Escena 3A
+
+¿A qué vine yo a la cocina?
+
+Pulsa INTRO para volver a la sala del ordenador.
+
+> (#3B)
+
+## Escena 3B
+Revisemos qué ponía en la tarjeta:
+
+"La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños".
+
+Vamos primero a ver qué hora marca el reloj.
+
+> Ir a la cocina (#3A)
+
+> Ir al recibidor (#4)
+
+Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
+
 
 ## Escena 4
+
+El recibidor es bastante pequeño pero acogedor. En una de sus paredes, se encuentra un reloj cuyas manecillas hace ya tiempo que no funcionan. No recuerdas el día que se detuvieron, pero sí puedes ver que lo hicieron un minuto más tarde de las 5 y media.
+
+¿Cuáles son los primeros 3 dígitos de la contraseña?
+
+> 531 (#5)
+
+Error: Mmmm... Creo que así no era. Vuélvelo a intentar.
+
+## Escena 5
+
+¡Genial! Ya tienes los 3 primeros números de la contraseña. Coges de nuevo la tarjeta y vuelves a leer información que ponía sobre la contraseña:
+
+"La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños".
+
+Vamos a buscar ahora la tarjeta de mi último cumpleaños.
+
+> Ir a la cocina (#5A)
+
+> Ir al dormitorio (#6)
+
+Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
+
+## Escena 5A
+
+¿A qué vine yo a la cocina?
+
+Pulsa INTRO para volver a la sala del ordenador.
+
+> (#5)
+
+## Escena 6
+El dormitorio está muy desordenado, a diferencia del resto de la casa. No eres una persona que acostumbre a guardar cosas que no usas, pero el dormitorio parece ser una excepción.
+
+La mesita de noche tiene dos cajones. Decides buscar en:
+
+> Primer cajón (#6A)
+
+> Segundo cajón (#7)
+
+## Escena 6A
+¡Buf! Definitivamente deberías ordenar este cajón. Hay un libro, una flor seca, dos paquetes de pañuelos, unas gafas de lectura y.... no, no hay más nada. Parece que no guardaste aquí la tarjeta de cumpleaños.
+
+> Segundo cajón (#7)
+
+> Ir a la cocina (#6B)
+
+## Escena 6B
+¿A qué vine yo a la cocina?
+
+> Pulsa INTRO para volver al dormitorio (#6)
+
+## Escena 7
+El segundo cajón está completamente lleno de papeles. Por suerte para ti, la tarjeta de cumpleaños es lo suficientemente colorida como para encontrarla en apenas unos segundos.
+
+En la portada tiene dibujadas 7 estrellas amarillas junto a un texto que dice "Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños".
+
+Decides:
+> Probar el número 7 (#7A)
+
+> Volver a leer el texto de la tarjeta (#8)
+
+## Escena 7A
+Te dirijes rápidamente al ordenador y escribes la contraseña: La hora era 531 y eran 7 estrellas...
+
+Escribes 5317, pulsas INTRO y en el ordenador aparece un mensaje: "Contraseña incorrecta, vuélvalo a intentar".
+
+> Ir a la cocina (#7A1)
+
+> Volver a mirar la tarjeta de las estrellas (#8)
+
+## Escena 7A1
+En serio, ¿otra vez en la cocina? Justo cuando te ibas a dar la vuelta, te fijas en una cosa que no viste antes: En el frigorífico hay pegado un papel rosa:
+
+> Ignorarlo (#8)
+
+> Leerlo (7A2)
+
+## Escena 7A2
+"Contraseña nueva del ordenador: 5312"
+
+> Pulsa INTRO para volver a la sala del ordenador e introducir la contraseña. (11)
+
+## Escena 8
+En la portada tiene dibujadas 7 estrellas amarillas junto a un texto que dice "Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños".
+
+En las noches más oscuras...
+
+Decides:
+> Acercarte a la ventana (#9)
+
+> Apagar las luces (#8A)
+
+## Escena 8A
+Mmmm... No ves ningún cambio...
+
+> Acercarte a la ventana (#9)
+
+> Apagar las luces (#8A)
+
+## Escena 9
+Mmmm... No ves ningún cambio... Quizás...
+
+> Acercarte a la ventana (#9)
+
+> Apagar las luces (#10)
+
+## Escena 10
+
+¡Ah! Eso era: primero había que acercarse a la ventana para activar la pintura luminiscente y luego apagar las luces para poder ver el brillo.
+
+En la tarjeta se han iluminado únicamente 2 estrellas. Teniendo en cuenta que los primeros 3 dígitos eran 531, la contraseña del ordenador será...
+
+> 5312
+
+## Escena 11
 
 El ordenador parece cargar durante unos segundos y finalmente se termina de encender. Sólo nos queda abrir el navegador y... ¡un momento! No tienes conexión a internet. ¿Qué está ocurriendo? Justo en ese momento te suena el teléfono: es el director de la editorial, te ha enviado un nuevo mensaje:
 
@@ -186,11 +331,11 @@ Coges tus cosas y decides salir corriendo en dirección a la Universidad. Allí 
 
 ¿Con qué servicio de la Universidad de Sevilla tendrá Alba que ponerse en contacto?
 
-> Biblioteca (#5)
+> Biblioteca (#12)
 
 Error: El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas.
 
-## Escena 5
+## Escena 12
 A los pocos minutos recibes una llamada a tu teléfono: es Alba, que ya ha hablado con la Biblioteca de la Universdad de Sevilla y ha recibido toda la información que necesitas. 
 * Alba:   En su web tienen disponible mucha información para investigar y publicar, tienen un grupo de apoyo a la investigación, un grupo de Ciencia Abierta y un grupo de gestión de datos de investigación. Te envío por mensaje la URL de la página que debes consultar. ¡Mucha suerte!
 
@@ -198,11 +343,11 @@ Acto seguido finaliza la llamada telefónica y recibes en tu teléfono la direcc
 
 ¿Cuántas comunidades diferentes podemos encontrar en idUS?
 
-> 6 (#6)
+> 6 (#13)
 
 Error: El director de la editorial golpea más fuerte la puerta; creo que ese no es el número correcto.
 
-## Escena 6
+## Escena 13
 Usando el Depósito de Investigación de la Universidad de Sevilla podrás conseguir no solo tener una mayor visibilidad, uso e impacto, sino que obtendrás mayor reconocimiento como autor, al ser más difundido y citado, garantizando además la preservación de tu investigación.
 
 De repente  se escucha un ruido muy fuerte proveniente de la puerta: ¡es el director de la editorial, que ha conseguido derribar la puerta y te está buscando para robarte los documentos de tu investigación!
@@ -211,37 +356,34 @@ De repente  se escucha un ruido muy fuerte proveniente de la puerta: ¡es el dir
 
 > Esconderte debajo de la mesa. (#0C)
 
-> Salir corriendo por la puerta. (#7)
+> Salir corriendo por la puerta. (#14)
 
 Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
 
-## Escena 6A
+## Escena 13A
 ¡Rápido! ¿Qué decides hacer?
 
 > Esconderte debajo de la mesa. (#0A1)
 
-> Salir corriendo por la puerta. (#7)
+> Salir corriendo por la puerta. (#14)
 
 Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
 
-## Escena 7
+## Escena 14
 Consigues salir por la puerta y te diriges a toda velocidad a la Biblioteca de la Universidad más cercana. Allí te permitirán entregar el resultado de todos tus años de investigación y podrás publicarlo en Ciencia Abierta antes de que el director de la editorial te atrape.
 
 Nada más llegar a la biblioteca, solicitas uno de los portátiles de préstamo que la Biblioteca de la Universidad de Sevilla tiene a disposición de los estudiantes e investigadores. Estás a punto de publicar tu artículo pero... necesitas indicar el tipo de licencia en el que publicar tu investigación.
 
 > Copyright Tradicional (#0A2)
 
-> Creative Commons (#8)
+> Creative Commons (#15)
 
 Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
 
-## Escena 8
+## Escena 15
 Justo al pulsar el botón de enviar aparece el director de la editorial por la puerta. Intenta abalanzarte sobre ti pero ya es demasiado tarde: el resultado de tu investigación está ya publicado bajo una licencia Creative Comons que permite copiar, reproducir, distribuir y comunicar públicamente la obra, siempre y cuando se citen y reconozcan a los autores originales. No se permite, sin embargo, utilizar esta obra para fines comerciales ni la creación de obras derivadas de la misma.
 
-¡Enhorabuena! Has publicado tu investigación con éxito y has derrotado al malvado director de la editorial Pay4Books.
-
-
-
+¡Enhorabuena! Has publicado tu investigación con éxito y has derrotado al malvado director de la editorial Pay&Pay.
 
 # Diagrama de escenas
 
@@ -254,16 +396,42 @@ graph TD
     0B --> 2A
     2A --> 0B
     2A --> 3
+    3 --> 3A
+    3A --> 3B
+    3B --> 3A
+    3B --> 4
     3 --> 4
     4 --> 5
+    5 --> 5A
+    5A --> 5
     5 --> 6
-    6 --> 0C
+    6 --> 6A
+    6A --> 6B
+    6B --> 6
     6 --> 7
-    0C --> 6A
-    6A --> 0A1:(0A1 Game Over 1)
-    6A --> 7
-    7 --> 0A2:(0A2 Game Over 2)
-    7 --> 8(8 FIN)
+    7 --> 7A
+    7 --> 8
+    7A --> 7A1
+    7A --> 8
+    7A1 --> 8
+    7A1 --> 7A2
+    8 --> 8A
+    8A --> 8A
+    8 --> 9
+    8A --> 9
+    9 --> 9
+    9 --> 10
+    10 --> 11
+    7A2 --> 11
+    11 --> 12
+    12 --> 13
+    13 --> 0C
+    0C --> 13A
+    13A --> 0A1:(0A1 Game Over 1)
+    13 --> 14
+    13A --> 14
+    14 --> 0A2:(0A2 Game Over 2)
+    14 --> 15(15 FIN)
 ```
 
 
