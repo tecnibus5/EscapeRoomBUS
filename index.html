@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Escape Room BUS</title>
     <meta name="description" content="Juego interactivo tipo Escape Room para dar a conocer algunos de los aspectos más importeantes de la Biblioteca de la Universidad de Sevilla.">
-    <link rel="stylesheet" href="./css/estilo.css"> <!-- Enlaza tu archivo CSS si lo tienes -->
+    <link rel="stylesheet" href="./css/estilo.css" type="text/css">
+    <link rel="stylesheet" href="./css/game.css" type="text/css">
 </head>
 <body>
     <header>
@@ -82,9 +83,19 @@
             <section>
                 <h2>Escape Room BUS: Juego</h2>
                 <!------------------------------------- AQUÍ EMPIEZA EL JUEGO ------------------------------------->
-                
+                <div class="game-bg-wrapper">
+                    <div id="game" class="game-bg">
+                    </div>
+                    <div id="game-input-div">
+                        <span class="text-style">&gt;</span>
+                        <input type="text" name="game-input" id="game-input" class="game-input text-style">
+                    </div>
+                    <div id="boton-bonito-wrapper">
+                        <button class="boton-bonito" onclick="main()">Comenzar</button>
+                    </div>
+                </div>
+                <script src="./js/main.js"  type="text/javascript"></script>
                 <!------------------------------------- AQUÍ TERMINA EL JUEGO ------------------------------------->
-                <div class="juego"></div>
             </section>
         </div>
         <div class="columna" id="lateral">
