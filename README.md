@@ -79,6 +79,32 @@ Si la única acción de una escena ACCION es "" (vacía), entonces se trata de u
 
 Cada una de las escenas se recoge dentro de un array, que luego será leído por el motor del juego.
 
+## Motor del juego
+
+```mermaid
+graph TD
+    carga["Carga de ficheros<br/>a JS local"]
+    inicio["Carga escena inicial"]
+    espera["Espera respuesta"]
+    accion["Usuario escoge acción"]
+    accion_existe{{"¿Es una acción válida?"}}
+    estado_final{{"¿Es un estado final?"}}
+    gameover["Fin del juego"]
+    error("Se muestra un error")
+    nueva_escena("Se cambia la escena<br/>según la acción")
+
+    carga --> inicio    
+    subgraph sg1 ["Bucle principal"]
+        direction LR
+        inicio --> espera
+        espera --> accion
+        accion --> accion_existe
+        accion_existe -->|no|error --> espera
+        accion_existe -->|sí|nueva_escena --> estado_final
+        estado_final -->|no|espera
+        estado_final -->|sí| gameover
+    end
+```
 
 # Sinopsis de la historia
 
