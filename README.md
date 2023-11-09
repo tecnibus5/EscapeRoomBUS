@@ -443,7 +443,7 @@ graph TD
     13A --> 0A:(0A Game Over 1)
     1 --> 0A:(0A Game Over 1)
     13 --> 14
-    13B --> 14
+    13A --> 14
     14 --> 0B:(0B Game Over 2)
     14 --> 15(15 FIN)
 ```
