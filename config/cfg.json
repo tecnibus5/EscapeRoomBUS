@@ -1,5 +1,4 @@
-[
-{
+[{
     "id":"0A",
     "tipo":"FINAL",
     "descripcion": "Game Over 1",
@@ -466,8 +465,6 @@
         "¡Enhorabuena! Has publicado tu investigación con éxito y has derrotado al malvado director de la editorial Pay&Pay."
     ],
     "acciones":{
-        "OPCION1":"AA",
-        "OPCION2":"AA"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
     "img":""
