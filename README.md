@@ -118,12 +118,6 @@ Game Over: El director de la editorial Pay&Pay se ha adueñado de tu investigaci
 ## Escena 0B
 Game Over: El director de la editorial no ha podido hacerse con el control de tu investigación, pero no la has publicado en Ciencia Abierta y como nadie la podrá leer pasará desapercibida para la comunidad científica.
 
-## Escena 2A
-No encuentras nada.
-
-## Escena 13A
-El director de la editorial parece que te ha leído la mente y está a punto de atraparte. (#13B)
-
 ## Escena 1
 
 Eres un investigador de la Universidad de Sevilla que está trabajando en la vacuna contra el cáncer de mama. No tienes apenas recursos ni nadie que colabore contigo, pero tu intuición te dice que vas por buen camino. Para continuar con tu investigación, te planteas solicitar ayuda a una editorial.
@@ -145,13 +139,18 @@ Error: No entiendo lo que dices, tienes que escribir una de las opciones mostrad
 
 ¡No puedes creer que la editorial quiera quedarse con todos los beneficios de tu investigación! Eres partidario de la Ciencia Abierta: ciencia libre y accesible para todos/as y te niegas a firmar un contrato así. Cierras el correo electrónico y decides encender el ordenador para buscar cómo publicar el resultado de tu investigación en abierto.
 
-Al pulsar el botón de encendido el ordenador te pide la contraseña de tu usuario para iniciar sesión. ¡Vaya! Justo la cambiaste ayer y no eres capaz de recordar cuál era. Menos mal que la apuntaste en una tarjeta publicitaria y la guardaste en uno de los cajones del escritorio. Decides mirar en:
+Al pulsar el botón de encendido el ordenador te pide la contraseña de tu usuario para iniciar sesión. ¡Vaya! Justo la cambiaste ayer y no eres capaz de recordar cuál era. Menos mal que la apuntaste en una tarjeta publicitaria y la guardaste en uno de los cajones del escritorio.
+
+Mira primero en:
 
 > Cajón derecho. (#2A)
 
 > Cajón izquierdo. (#3)
 
 Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
+
+## Escena 2A
+No encuentras nada.
 
 ## Escena 2B
 Ayer guardaste la tarjeta en uno de los cajones del escritorio pero no la has visto en el cajón derecho. Esta vez decides mirar en:
@@ -236,31 +235,31 @@ El dormitorio está muy desordenado, a diferencia del resto de la casa. No eres 
 
 La mesita de noche tiene dos cajones. Decides buscar en:
 
-> Primer cajón (#6A)
+> Primer cajón (#7)
 
-> Segundo cajón (#7)
+> Segundo cajón (#6A)
 
 ## Escena 6A
 ¡Buf! Definitivamente deberías ordenar este cajón. Hay un libro, una flor seca, dos paquetes de pañuelos, unas gafas de lectura y.... no, no hay más nada. Parece que no guardaste aquí la tarjeta de cumpleaños.
 
-> Segundo cajón (#7)
+> Primer cajón (#7)
 
 > Ir a la cocina (#6B)
 
 ## Escena 6B
-¿A qué vine yo a la cocina?
+¿Por qué estoy aquí de nuevo?
 
 > Pulsa INTRO para volver al dormitorio (#6)
 
 ## Escena 7
-El segundo cajón está completamente lleno de papeles. Por suerte para ti, la tarjeta de cumpleaños es lo suficientemente colorida como para encontrarla en apenas unos segundos.
+El primer cajón está completamente lleno de papeles. Por suerte para ti, la tarjeta de cumpleaños es lo suficientemente colorida como para encontrarla en apenas unos segundos.
 
-En la portada tiene dibujadas 7 estrellas amarillas junto a un texto que dice "Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños".
+En la portada tiene dibujadas 7 estrellas amarillas.
 
 Decides:
 > Probar el número 7 (#7A)
 
-> Volver a leer el texto de la tarjeta (#8)
+> Voltear la tarjeta (#8)
 
 ## Escena 7A
 Te dirijes rápidamente al ordenador y escribes la contraseña: La hora era 531 y eran 7 estrellas...
@@ -270,6 +269,14 @@ Escribes 5317, pulsas INTRO y en el ordenador aparece un mensaje: "Contraseña i
 > Ir a la cocina (#7B)
 
 > Volver a mirar la tarjeta de las estrellas (#8)
+
+## Escena 7A1
+En la portada tiene dibujadas 7 estrellas amarillas.
+
+Decides:
+> Probar el número 7 (#7A)
+
+> Voltear la tarjeta (#8)
 
 ## Escena 7B
 En serio, ¿otra vez en la cocina? Justo cuando te ibas a dar la vuelta, te fijas en una cosa que no viste antes: En el frigorífico hay pegado un papel rosa:
@@ -284,7 +291,7 @@ En serio, ¿otra vez en la cocina? Justo cuando te ibas a dar la vuelta, te fija
 > Pulsa INTRO para volver a la sala del ordenador e introducir la contraseña. (11)
 
 ## Escena 8
-En la portada tiene dibujadas 7 estrellas amarillas junto a un texto que dice "Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños".
+En la parte de atrás de la tarjeta solo hay un texto que dice "Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños".
 
 En las noches más oscuras...
 
@@ -360,6 +367,9 @@ De repente  se escucha un ruido muy fuerte proveniente de la puerta: ¡es el dir
 
 Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
 
+## Escena 13A
+El director de la editorial parece que te ha leído la mente y está a punto de atraparte. (#13B)
+
 ## Escena 13B
 ¡Rápido! ¿Qué decides hacer?
 
@@ -412,7 +422,9 @@ graph TD
     7 --> 7A
     7 --> 8
     7A --> 7B
-    7A --> 8
+    7A --> 7A1
+    7A1 --> 7B
+    7A1 --> 8
     7B --> 8
     7B --> 7C
     8 --> 8A
