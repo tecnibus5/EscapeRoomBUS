@@ -112,17 +112,17 @@ Eres un investigador de la Universidad de Sevilla que está trabajando en la vac
 
 
 # Desarrollo de la historia por escenas
-## Escena 0A1
+## Escena 0A
 Game Over: El director de la editorial Pay&Pay se ha adueñado de tu investigación y la ha publicado bajo el nombre de la editorial.
 
-## Escena 0A2
+## Escena 0B
 Game Over: El director de la editorial no ha podido hacerse con el control de tu investigación, pero no la has publicado en Ciencia Abierta y como nadie la podrá leer pasará desapercibida para la comunidad científica.
 
-## Escena 0B
+## Escena 2A
 No encuentras nada.
 
-## Escena 0C
-El director de la editorial parece que te ha leído la mente y está a punto de atraparte. (#13A)
+## Escena 13A
+El director de la editorial parece que te ha leído la mente y está a punto de atraparte. (#13B)
 
 ## Escena 1
 
@@ -134,7 +134,7 @@ La editorial Pay&Pay se da cuenta de que tu investigación es brillante y que po
 
 Decides:
 
-> Firmar (#0A1)
+> Firmar (#0A)
 
 > Rechazar (#2)
 
@@ -147,16 +147,16 @@ Error: No entiendo lo que dices, tienes que escribir una de las opciones mostrad
 
 Al pulsar el botón de encendido el ordenador te pide la contraseña de tu usuario para iniciar sesión. ¡Vaya! Justo la cambiaste ayer y no eres capaz de recordar cuál era. Menos mal que la apuntaste en una tarjeta publicitaria y la guardaste en uno de los cajones del escritorio. Decides mirar en:
 
-> Cajón derecho. (#0B)
+> Cajón derecho. (#2A)
 
 > Cajón izquierdo. (#3)
 
 Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
 
-## Escena 2A
+## Escena 2B
 Ayer guardaste la tarjeta en uno de los cajones del escritorio pero no la has visto en el cajón derecho. Esta vez decides mirar en:
 
-> Cajón derecho. (#0B)
+> Cajón derecho. (#2A)
 
 > Cajón izquierdo. (#3)
 
@@ -267,18 +267,18 @@ Te dirijes rápidamente al ordenador y escribes la contraseña: La hora era 531 
 
 Escribes 5317, pulsas INTRO y en el ordenador aparece un mensaje: "Contraseña incorrecta, vuélvalo a intentar".
 
-> Ir a la cocina (#7A1)
+> Ir a la cocina (#7B)
 
 > Volver a mirar la tarjeta de las estrellas (#8)
 
-## Escena 7A1
+## Escena 7B
 En serio, ¿otra vez en la cocina? Justo cuando te ibas a dar la vuelta, te fijas en una cosa que no viste antes: En el frigorífico hay pegado un papel rosa:
 
 > Ignorarlo (#8)
 
-> Leerlo (7A2)
+> Leerlo (7C)
 
-## Escena 7A2
+## Escena 7C
 "Contraseña nueva del ordenador: 5312"
 
 > Pulsa INTRO para volver a la sala del ordenador e introducir la contraseña. (11)
@@ -354,16 +354,16 @@ De repente  se escucha un ruido muy fuerte proveniente de la puerta: ¡es el dir
 
 ¡Rápido! ¿Qué decides hacer?
 
-> Esconderte debajo de la mesa. (#0C)
+> Esconderte debajo de la mesa. (#13A)
 
 > Salir corriendo por la puerta. (#14)
 
 Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
 
-## Escena 13A
+## Escena 13B
 ¡Rápido! ¿Qué decides hacer?
 
-> Esconderte debajo de la mesa. (#0A1)
+> Esconderte debajo de la mesa. (#0A)
 
 > Salir corriendo por la puerta. (#14)
 
@@ -374,7 +374,7 @@ Consigues salir por la puerta y te diriges a toda velocidad a la Biblioteca de l
 
 Nada más llegar a la biblioteca, solicitas uno de los portátiles de préstamo que la Biblioteca de la Universidad de Sevilla tiene a disposición de los estudiantes e investigadores. Estás a punto de publicar tu artículo pero... necesitas indicar el tipo de licencia en el que publicar tu investigación.
 
-> Copyright Tradicional (#0A2)
+> Copyright Tradicional (#0B)
 
 > Creative Commons (#15)
 
@@ -389,13 +389,13 @@ Justo al pulsar el botón de enviar aparece el director de la editorial por la p
 
 ```mermaid
 graph TD
-    1 --> 0A1:(0A1 Game Over 1)
+    1 --> 0A:(0A Game Over 1)
     1 --> 2
-    2 --> 0B
+    2 --> 2A
     2 --> 3
-    0B --> 2A
-    2A --> 0B
-    2A --> 3
+    2A --> 2B
+    2B --> 2A
+    2B --> 3
     3 --> 3A
     3A --> 3B
     3B --> 3A
@@ -411,10 +411,10 @@ graph TD
     6 --> 7
     7 --> 7A
     7 --> 8
-    7A --> 7A1
+    7A --> 7B
     7A --> 8
-    7A1 --> 8
-    7A1 --> 7A2
+    7B --> 8
+    7B --> 7C
     8 --> 8A
     8A --> 8A
     8 --> 9
@@ -422,15 +422,15 @@ graph TD
     9 --> 9
     9 --> 10
     10 --> 11
-    7A2 --> 11
+    7C --> 11
     11 --> 12
     12 --> 13
-    13 --> 0C
-    0C --> 13A
-    13A --> 0A1:(0A1 Game Over 1)
+    13 --> 13A
+    13A --> 13B
+    13B --> 0A:(0A Game Over 1)
     13 --> 14
-    13A --> 14
-    14 --> 0A2:(0A2 Game Over 2)
+    13B --> 14
+    14 --> 0B:(0B Game Over 2)
     14 --> 15(15 FIN)
 ```
 
