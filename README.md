@@ -279,16 +279,20 @@ Decides:
 > Voltear la tarjeta (#8)
 
 ## Escena 7B
-En serio, ¿otra vez en la cocina? Justo cuando te ibas a dar la vuelta, te fijas en una cosa que no viste antes: En el frigorífico hay pegado un papel rosa:
+En serio, ¿otra vez en la cocina?
 
-> Ignorarlo (#8)
+Sin embargo...
+
+Justo cuando te ibas a dar la vuelta, te fijas en una cosa que no viste antes: En el frigorífico hay pegado un papel rosa:
+
+> Ignorarlo (#7A1)
 
 > Leerlo (7C)
 
 ## Escena 7C
 "Contraseña nueva del ordenador: 5312"
 
-> Pulsa INTRO para volver a la sala del ordenador e introducir la contraseña. (11)
+> Probar la contraseña 5312. (11)
 
 ## Escena 8
 En la parte de atrás de la tarjeta solo hay un texto que dice "Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños".
@@ -333,7 +337,7 @@ Coges tus cosas y decides salir corriendo en dirección a la Universidad. Allí 
 * Alba:   Sí, ¿qué puedo hacer por ti? 
 * Tú:     Necesito que… 
 * Alba:   ¡¡¡Habla más fuerte, que no te oigo!!! 
-* Tú: Acabo de entrar al laboratorio y tengo al tirano dando golpes en la puerta queriendo entrar, ¡no quiero que me escuche!. Necesito que te pongas en contacto con la Universidad de Sevilla para que nos asesoren en temas de publicación en abierto, propiedad intelectual, licencias Creative Commons, etc., para poder compartir mi investigación y generar mayor impacto en la sociedad.
+* Tú:     Acabo de entrar al laboratorio y tengo al tirano dando golpes en la puerta queriendo entrar, ¡no quiero que me escuche!. Necesito que te pongas en contacto con la Universidad de Sevilla para que nos asesoren en temas de publicación en abierto, propiedad intelectual, licencias Creative Commons, etc., para poder compartir mi investigación y generar mayor impacto en la sociedad.
 * Alba:   Vale, dame 2 minutos que me  ponga en contacto con ellos y ahora te devuelvo la llamada. 
 
 ¿Con qué servicio de la Universidad de Sevilla tendrá Alba que ponerse en contacto?
@@ -361,16 +365,15 @@ De repente  se escucha un ruido muy fuerte proveniente de la puerta: ¡es el dir
 
 ¡Rápido! ¿Qué decides hacer?
 
-> Esconderte debajo de la mesa. (#13A)
+> Esconderte bajo la mesa. (#13A)
 
 > Salir corriendo por la puerta. (#14)
 
 Error: No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.
 
 ## Escena 13A
-El director de la editorial parece que te ha leído la mente y está a punto de atraparte. (#13B)
+El director de la editorial parece que te ha leído la mente y está a punto de atraparte.
 
-## Escena 13B
 ¡Rápido! ¿Qué decides hacer?
 
 > Esconderte debajo de la mesa. (#0A)
@@ -399,7 +402,6 @@ Justo al pulsar el botón de enviar aparece el director de la editorial por la p
 
 ```mermaid
 graph TD
-    1 --> 0A:(0A Game Over 1)
     1 --> 2
     2 --> 2A
     2 --> 3
@@ -421,11 +423,11 @@ graph TD
     6 --> 7
     7 --> 7A
     7 --> 8
-    7A --> 7B
     7A --> 7A1
-    7A1 --> 7B
+    7A1 --> 7A
+    7A --> 7B
     7A1 --> 8
-    7B --> 8
+    7B --> 7A1
     7B --> 7C
     8 --> 8A
     8A --> 8A
@@ -438,8 +440,8 @@ graph TD
     11 --> 12
     12 --> 13
     13 --> 13A
-    13A --> 13B
-    13B --> 0A:(0A Game Over 1)
+    13A --> 0A:(0A Game Over 1)
+    1 --> 0A:(0A Game Over 1)
     13 --> 14
     13B --> 14
     14 --> 0B:(0B Game Over 2)
