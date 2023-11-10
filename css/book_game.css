@@ -1,0 +1,111 @@
+body, html {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.d-none {
+    display: none;
+}
+
+#game-bg-wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px #22222299;
+    max-height: 60vh;
+    aspect-ratio: 16/9;
+    position: relative;
+    display: flex;
+}
+
+#inicio-juego {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.div-cover-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    aspect-ratio: 1;
+    mix-blend-mode: multiply;
+}
+
+.cover-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cover-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #222222;
+    word-break: keep-all;
+    text-align: center;
+    text-shadow:
+        3px 3px 10px #ffffff,
+        -3px 3px 10px #ffffff,
+        -3px -3px 10px #ffffff,
+        3px -3px 10px #ffffff;
+}
+.cover-title {
+    font-size: clamp(0.8em,6.4vw,2.4em);
+}
+.cover-subtitle {
+    font-size: clamp(0.5em,4vw,1.5em);
+}
+
+.boton-bonito {
+    background-color: #ec7800;
+    color: #222222;
+    font-size: clamp(10px,5vw,16px);
+    outline: 0;
+    border: 0;
+    box-shadow: 4px 4px 0 #333333;
+    width: clamp(200px,16vw,400px);
+    aspect-ratio: 4/1;
+    transition-duration: 0.4s;
+}
+
+.boton-bonito:hover {
+    transition-duration: 0.4s;
+    transform: translate(-4px,-4px);
+    box-shadow: 8px 8px 0 #333333;
+}
+
+.boton-bonito:active {
+    transform: translate(0,0);
+    box-shadow: 4px 4px 0 #222222;
+}
+
+#btn-start-game {
+    margin: auto;
+}
+
+#inicio-texto {
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    width: 100%;
+    grid-gap: clamp(0px,1vw,40px);
+    z-index: 1;
+}
+#inicio-texto > h1,
+#inicio-texto > h2 {
+    margin: 0;
+    width: 100%;
+    min-width: 0;
+}
+
+@media screen and (max-width: 768px) {
+    #game-bg-wrapper {
+        width: 100%;
+        aspect-ratio: 9/16;
+        max-height: 80vh;
+    }
+}

@@ -1,150 +1,209 @@
-[
 {
-    "id":"0A1",
-    "tipo":"FINAL",
-    "descripcion": "Game Over 1",
-    "textos":[2],
-    "acciones":{
+    "portada": {
+        "titulo": "La gran aventura",
+        "img": "../assets/img/game/bookcover.jpg"
     },
-    "error":"Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez."
-},
-{
-    "id":"0A2",
-    "tipo":"FINAL",
-    "descripcion": "Game Over 2",
-    "textos":[3],
-    "acciones":{
-    },
-    "error":"Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez."
-},
-{
-    "id":"0B",
-    "tipo":"ACCIÓN",
-    "descripcion": "Lugar vacío",
-    "textos":[4,42],
-    "acciones":{
-        "":"2A"
-    },
-    "error":"Este mensaje no debería aparecer, si aparece es que algo ha ido mal."
-},
-{
-    "id":"0C",
-    "tipo":"ACCIÓN",
-    "descripcion": "Casi te atrapan",
-    "textos":[5,42],
-    "acciones":{
-        "":"6A"
-    },
-    "error":"Este mensaje no debería aparecer, si aparece es que algo ha ido mal."
-},
-{
-    "id":"1",
-    "tipo":"INICIAL",
-    "descripcion": "Escena 1",
-    "textos":[6,7,8,9,37],
-    "acciones":{
-        "FIRMAR":"0A1",
-        "RECHAZAR":"2"
-    },
-    "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
-},
-{
-    "id":"2",
-    "tipo":"ACCIÓN",
-    "descripcion": "Escena 2",
-    "textos":[10,11,38],
-    "acciones":{
-        "CAJÓN DERECHO":"0B",
-        "CAJÓN IZQUIERDO":"3"
-    },
-    "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
-},
-{
-    "id":"2A",
-    "tipo":"ACCIÓN",
-    "descripcion": "Escena 2 alternativa",
-    "textos":[12,38],
-    "acciones":{
-        "CAJÓN DERECHO":"0B",
-        "CAJÓN IZQUIERDO":"3"
-    },
-    "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
-},
-{
-    "id":"3",
-    "tipo":"ACCIÓN",
-    "descripcion": "Escena 3",
-    "textos":[13],
-    "acciones":{
-        "8/16":"4"
-    },
-    "error":"El ordenador carga durante unos segundos y luego aparede un mensaje: 'Contraseña incorrecta. Por favor vuélvalo a intentar.'"
-},
-{
-    "id":"4",
-    "tipo":"ACCIÓN",
-    "descripcion": "Escena 4",
-    "textos":[14,15,16,17,18,19,20,21,22,23],
-    "acciones":{
-        "BIBLIOTECA":"5",
-        "BIBLIOTECA DE LA UNIVERSIDAD DE SEVILLA":"5",
-        "BIBLIOTECA DE LA US":"5",
-        "BUS":"5",
-        "BIBUS":"5"
-    },
-    "error":"El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas."
-},
-{
-    "id":"5",
-    "tipo":"ACCIÓN",
-    "descripcion": "Escena 5",
-    "textos":[24,25,26,27],
-    "acciones":{
-        "6":"6",
-        "SEIS":"6"
-    },
-    "error":"El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas."
-},
-{
-    "id":"6",
-    "tipo":"ACCIÓN",
-    "descripcion": "Escena 6",
-    "textos":[28,29,30,39],
-    "acciones":{
-        "ESCONDERTE DEBAJO DE LA MESA":"0C",
-        "SALIR CORRIENDO POR LA PUERTA":"7"
-    },
-    "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
-},
-{
-    "id":"6A",
-    "tipo":"ACCIÓN",
-    "descripcion": "Escena 6 alternativa",
-    "textos":[30,39],
-    "acciones":{
-        "ESCONDERTE DEBAJO DE LA MESA":"0A1",
-        "SALIR CORRIENDO POR LA PUERTA":"7"
-    },
-    "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
-},
-{
-    "id":"7",
-    "tipo":"ACCIÓN",
-    "descripcion": "Escena 7",
-    "textos":[31,32,40],
-    "acciones":{
-        "COPYRIGHT TRADICIONAL":"0A2",
-        "CREATIVE COMMONS": "8"
-    },
-    "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
-},
-{
-    "id":"8",
-    "tipo":"ACCIÓN",
-    "descripcion": "Escena 8",
-    "textos":[33,34],
-    "acciones":{
-    },
-    "error":"Has terminado el juego con éxito. Puedes cerrar la página o recargar la página para volver a empezar."
+    "escenas":[
+        {
+            "id": "0A1",
+            "tipo": "FINAL",
+            "descripcion": "Game Over 1",
+            "textos": [
+                2
+            ],
+            "acciones": {},
+            "error": "Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez."
+        },
+        {
+            "id": "0A2",
+            "tipo": "FINAL",
+            "descripcion": "Game Over 2",
+            "textos": [
+                3
+            ],
+            "acciones": {},
+            "error": "Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez."
+        },
+        {
+            "id": "0B",
+            "tipo": "ACCIÓN",
+            "descripcion": "Lugar vacío",
+            "textos": [
+                4,
+                42
+            ],
+            "acciones": {
+                "": "2A"
+            },
+            "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal."
+        },
+        {
+            "id": "0C",
+            "tipo": "ACCIÓN",
+            "descripcion": "Casi te atrapan",
+            "textos": [
+                5,
+                42
+            ],
+            "acciones": {
+                "": "6A"
+            },
+            "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal."
+        },
+        {
+            "id": "1",
+            "tipo": "INICIAL",
+            "descripcion": "Escena 1",
+            "textos": [
+                6,
+                7,
+                8,
+                9,
+                37
+            ],
+            "acciones": {
+                "FIRMAR": "0A1",
+                "RECHAZAR": "2"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+        },
+        {
+            "id": "2",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escena 2",
+            "textos": [
+                10,
+                11,
+                38
+            ],
+            "acciones": {
+                "CAJÓN DERECHO": "0B",
+                "CAJÓN IZQUIERDO": "3"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+        },
+        {
+            "id": "2A",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escena 2 alternativa",
+            "textos": [
+                12,
+                38
+            ],
+            "acciones": {
+                "CAJÓN DERECHO": "0B",
+                "CAJÓN IZQUIERDO": "3"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+        },
+        {
+            "id": "3",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escena 3",
+            "textos": [
+                13
+            ],
+            "acciones": {
+                "8/16": "4"
+            },
+            "error": "El ordenador carga durante unos segundos y luego aparede un mensaje: 'Contraseña incorrecta. Por favor vuélvalo a intentar.'"
+        },
+        {
+            "id": "4",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escena 4",
+            "textos": [
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23
+            ],
+            "acciones": {
+                "BIBLIOTECA": "5",
+                "BIBLIOTECA DE LA UNIVERSIDAD DE SEVILLA": "5",
+                "BIBLIOTECA DE LA US": "5",
+                "BUS": "5",
+                "BIBUS": "5"
+            },
+            "error": "El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas."
+        },
+        {
+            "id": "5",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escena 5",
+            "textos": [
+                24,
+                25,
+                26,
+                27
+            ],
+            "acciones": {
+                "6": "6",
+                "SEIS": "6"
+            },
+            "error": "El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas."
+        },
+        {
+            "id": "6",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escena 6",
+            "textos": [
+                28,
+                29,
+                30,
+                39
+            ],
+            "acciones": {
+                "ESCONDERTE DEBAJO DE LA MESA": "0C",
+                "SALIR CORRIENDO POR LA PUERTA": "7"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+        },
+        {
+            "id": "6A",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escena 6 alternativa",
+            "textos": [
+                30,
+                39
+            ],
+            "acciones": {
+                "ESCONDERTE DEBAJO DE LA MESA": "0A1",
+                "SALIR CORRIENDO POR LA PUERTA": "7"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+        },
+        {
+            "id": "7",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escena 7",
+            "textos": [
+                31,
+                32,
+                40
+            ],
+            "acciones": {
+                "COPYRIGHT TRADICIONAL": "0A2",
+                "CREATIVE COMMONS": "8"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+        },
+        {
+            "id": "8",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escena 8",
+            "textos": [
+                33,
+                34
+            ],
+            "acciones": {},
+            "error": "Has terminado el juego con éxito. Puedes cerrar la página o recargar la página para volver a empezar."
+        }
+    ]
 }
-]

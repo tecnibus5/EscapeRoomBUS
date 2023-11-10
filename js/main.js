@@ -63,15 +63,32 @@ function is_auto_scene(scene) {
     }
 }
 
-async function main() {
-    document.getElementById('boton-bonito-wrapper').remove();
-    const scenes = await load_scenes();
+async function load_game() {
+    const scenes_json = await load_scenes();
     const texts = await load_texts();
-
-    if (scenes == null || texts == null) {
+    
+    if (scenes_json == null || texts == null) {
         alert("No se han encontrado los archivos de juego en el servidor");
         return 0;
     }
+
+    const cover = scenes_json['portada'];
+    const scenes = scenes_json['escenas'];
+
+    let inicioDiv = document.getElementById('inicio-juego');
+    let inicioText = document.getElementById('inicio-texto');
+
+    // Add cover image, text and start button
+    inicioText.insertAdjacentHTML('afterbegin',`<h2 class="cover-text cover-subtitle">Elige tu propia aventura</h1>`);
+    inicioText.insertAdjacentHTML('afterbegin',`<h1 class="cover-text cover-title">${cover['titulo']}</h1>`);
+    inicioDiv.insertAdjacentHTML('afterbegin',`<div class="div-cover-img"><img src="${cover['img']}" alt="Portada" class="cover-img"></div>`);
+
+}
+
+document.addEventListener('DOMContentLoaded',load_game)
+
+async function main() {
+    document.getElementById('boton-bonito-wrapper').remove();
 
     let gameInput = document.getElementById('game-input');
     let gameScreen = document.getElementById('game');

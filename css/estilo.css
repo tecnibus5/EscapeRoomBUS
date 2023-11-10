@@ -9,36 +9,81 @@
 
 /* Estilos para cada columna */
 .columna {
+    display: flex;
     flex-grow: 1; /* Cada columna ocupa un tercio del espacio disponible */
     padding: 20px; /* Agrega espaciado para separar el contenido */
     border: 0px solid #ccc; /* Opcional: Agrega un borde para separar visualmente las columnas */
 }
 
+#main-contenedor {
+    display: flex;
+}
+#main-contenedor section {
+    display: block;
+}
+
 #principal {
-    flex-grow: 5;
+    display: flex;
+    flex-wrap: wrap;
 }
+#principal .contenedor {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#segundo.contenedor {
+    justify-content: start;
+}
+
+#principal-game {
+    width: 75%;
+}
+#principal-game.columna {
+    display: flex;
+    flex-direction: column;
+}
+
+#principal-game.columna > section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
 #lateral {
-    flex-grow: 1;
+    width: 33%;
+    display: flex;
+    flex-shrink: 0;
 }
+#lateral > img {
+    width: clamp(240px,100%,360px);
+}
+
 #logo {
     flex-grow: 1;
+    flex-shrink: 0;
     align-items: center;
 }
+#logo img {
+    width: clamp(180px,80%,240px);
+}
+
 #equis {
     flex-grow: 0;
 }
 
-#logo img {
-    width: 80%;
+.main-columna {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2%;
 }
+
 .columna_encabezado {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #777 ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-grow: 1;
 }
 
@@ -59,29 +104,21 @@
     background: #FEE9B2;        /* Fondo de color naranja */
     border: 1px solid #000; /* Borde color negro y de 1 píxel de grosor */
 }
-.cambio_idioma_espanol {
-    width: 100px;              /* Ancho de 150 píxeles */
-    height: 30px;          /* Alto de 20 píxeles */
-    background: rgb(245, 174, 22);        /* Fondo de color naranja */
-    border: 1px solid #FFF; /* Borde color blanco y de 1 píxel de grosor */
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    color: #777 ;
-    font-family: 'Lato',sans-serif;
-}
+.cambio_idioma_espanol,
 .cambio_idioma_english {
     width: 100px;              /* Ancho de 150 píxeles */
     height: 30px;          /* Alto de 20 píxeles */
-    background: white;        /* Fondo de color naranja */
     border: 1px solid #FFF; /* Borde color blanco y de 1 píxel de grosor */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777 ;
-    font-family: 'Lato',sans-serif;
+}
+.cambio_idioma_espanol {
+    background: rgb(245, 174, 22);        /* Fondo de color naranja */
+}
+.cambio_idioma_english {
+    background: white;        /* Fondo de color naranja */
 }
 
+.cambio_idioma_espanol,
+.cambio_idioma_english,
 .cartelitos {
     color: #777 ;
     display: flex;
@@ -98,12 +135,6 @@
     font-family: 'Lato',sans-serif;
 }
 
-.juego {
-    width: 1100px;           /* Ancho de 800 píxeles */
-    height: 750px;          /* Alto de 500 píxeles */
-    background-color: #1b1b1b;
-}
-
 .cuadrado_amarillo {
     position: absolute;
     top: 50%;
@@ -114,7 +145,6 @@
 .barra_amarilla {
     position: relative;
     flex-grow: 10;
-    width: 80%;
     height: 100px;
     background-color: #ffc425;
     font-family: 'Lato',sans-serif;
@@ -126,7 +156,6 @@
 .barra_clarita {
     position: relative;
     flex-grow: 1;
-    width: 10%;
     height: 100px;
     background-color: #ffd051;
     display: flex;
@@ -140,7 +169,6 @@
 .barra_oscurita {
     position: relative;
     flex-grow: 1;
-    width: 10%;
     height: 100px;
     background-color: #2e2e2e;
     display: flex;
@@ -150,4 +178,26 @@
     width: 100%;
     height: 12px;
     background-color: #8d1905;
+}
+
+@media screen and (max-width: 768px) {
+    #main-contenedor {
+        flex-direction: column;
+        gap: 16px;
+    }
+    #header-contenedor {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    section {
+        width: 100%;
+    }
+    #principal-game,
+    #lateral {
+        width: 96%;
+    }
+    .columna_encabezado {
+        justify-content: flex-start;
+        flex-grow: 0;
+    }
 }
