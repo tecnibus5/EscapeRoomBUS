@@ -4,13 +4,16 @@ body, html {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
+}
+
+.main-columna {
+    position: relative;
 }
 
 #game-bg-wrapper {
     width: 100%;
     background-color: #ffffff;
-    box-shadow: 4px 4px 4px #22222299;
     max-height: 60vh;
     aspect-ratio: 16/9;
     position: relative;
@@ -25,6 +28,11 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.game-border {
+    box-shadow: 4px 4px 4px #22222299;
+    border: 1px solid #dddddd;
 }
 
 .div-cover-img {
@@ -102,10 +110,140 @@ body, html {
     min-width: 0;
 }
 
-@media screen and (max-width: 768px) {
+/* Una vez empezado el juego */
+#game {
+    width: 96%;
+    display: flex;
+    padding: 2%;
+}
+
+.game-col {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#scene-text {
+    width: 100%;
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#action-selectors {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    gap: 14px;
+
+    padding: 0 2%;
+    border-top: 1px solid #333333
+}
+
+#action-selectors > span {
+    color: #333333;
+    position: relative;
+    cursor: pointer;
+}
+
+#action-selectors > span:hover {
+    cursor: pointer;
+    color: #111111;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+
+#action-selectors > span::before {
+    content: '\25C0';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-125%,-50%);
+    color: #333333;
+    transition-duration: 0.5s;
+}
+
+#action-selectors > span:hover::before {
+    position: absolute;
+    left: -20%;
+    top: 50%;
+    transform: translate(-125%,-50%);
+    transition-duration: 0.5s;
+    font-style: normal;
+}
+
+form {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 40%;
+}
+
+.game-text-input {
+    flex-grow: 3;
+    border-width: 1px 0 1px 1px;
+    border-color: #dddddd;
+    border-radius: 6px 0 0 6px;
+}
+
+.game-text-input:focus {
+    box-sizing: border-box;
+    outline: 0;
+    border-width: 1px 0 1px 1px;
+    border-color: #333333;
+}
+
+.submit-text-input {
+    flex-grow: 1;
+    background-color: #ec7800;
+    color: #000000;
+    border-width: 1px;
+    border-color: #333333;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    box-shadow: 0 0 0 #333333;
+}
+
+.submit-text-input:hover {
+    transition-duration: 0.4s;
+    transform: translate(-4px,-4px);
+    box-shadow: 4px 4px 0 #333333;
+}
+
+.submit-text-input:active {
+    transition-duration: 0.4s;
+    transform: translate(0,0);
+    box-shadow: 0 0 0 #333333;
+}
+
+.form-error {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(0%,-120%);
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1080px) {
     #game-bg-wrapper {
         width: 100%;
         aspect-ratio: 9/16;
         max-height: 80vh;
+        box-shadow: 0 0 4px #22222299;
+    }
+    .div-cover-img {
+        width: 90%;
+    }
+    #game {
+        flex-wrap: wrap;
+    }
+    .game-col {
+        width: 100%;
+        height: 50%;
     }
 }

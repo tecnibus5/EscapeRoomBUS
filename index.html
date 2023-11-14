@@ -83,8 +83,16 @@
             <h2>Escape Room BUS: Juego</h2>
 
                 <!------------------------------------- AQUÍ EMPIEZA EL JUEGO ------------------------------------->
-                <div id="game-bg-wrapper">
-                    <div id="game" class="game-bg">
+                <div id="game-bg-wrapper" class="game-border">
+                    <div id="game" class="game-bg d-none game-border">
+                        <div id="picture-col" class="game-col"></div>
+                        <div id="text-col" class="game-col">
+                            <div id="scene-text">
+                            </div>
+                            <div id="action-selectors">
+                                <hr>
+                            </div>
+                        </div>
                     </div>
                     <!--
                     <div id="game-input-div">
@@ -94,7 +102,7 @@
                     -->
                     <div id="inicio-juego">
                         <div id="inicio-texto">
-                            <button id="btn-start-game" class="boton-bonito" onclick="main()">Comenzar</button>
+                            <button id="btn-start-game" class="boton-bonito">Comenzar</button>
                         </div>
                     </div>
                     <div id="fin-juego" class="d-none">

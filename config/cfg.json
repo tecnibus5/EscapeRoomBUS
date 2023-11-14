@@ -1,209 +1,477 @@
 {
     "portada": {
         "titulo": "La gran aventura",
-        "img": "../assets/img/game/bookcover.jpg"
+        "img": "../assets/img/game/cover.png"
     },
-    "escenas":[
+    "escenas": [
         {
-            "id": "0A1",
+            "id": "0A",
             "tipo": "FINAL",
             "descripcion": "Game Over 1",
             "textos": [
-                2
+                "Game Over: El director de la editorial Pay&Pay se ha adueñado de tu investigación y la ha publicado bajo el nombre de la editorial."
             ],
             "acciones": {},
-            "error": "Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez."
-        },
-        {
-            "id": "0A2",
-            "tipo": "FINAL",
-            "descripcion": "Game Over 2",
-            "textos": [
-                3
-            ],
-            "acciones": {},
-            "error": "Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez."
+            "error": "Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez.",
+            "img": ""
         },
         {
             "id": "0B",
-            "tipo": "ACCIÓN",
-            "descripcion": "Lugar vacío",
+            "tipo": "FINAL",
+            "descripcion": "Game Over 2",
             "textos": [
-                4,
-                42
+                "Game Over: El director de la editorial no ha podido hacerse con el control de tu investigación, pero no la has publicado en Ciencia Abierta y como nadie la podrá leer pasará desapercibida para la comunidad científica."
             ],
-            "acciones": {
-                "": "2A"
-            },
-            "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal."
-        },
-        {
-            "id": "0C",
-            "tipo": "ACCIÓN",
-            "descripcion": "Casi te atrapan",
-            "textos": [
-                5,
-                42
-            ],
-            "acciones": {
-                "": "6A"
-            },
-            "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal."
+            "acciones": {},
+            "error": "Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez.",
+            "img": ""
         },
         {
             "id": "1",
             "tipo": "INICIAL",
-            "descripcion": "Escena 1",
+            "descripcion": "Introducción",
             "textos": [
-                6,
-                7,
-                8,
-                9,
-                37
+                "Eres un investigador de la Universidad de Sevilla que está trabajando en la vacuna contra el cáncer de mama. No tienes apenas recursos ni nadie que colabore contigo, pero tu intuición te dice que vas por buen camino. Para continuar con tu investigación, te planteas solicitar ayuda a una editorial.",
+                "La editorial Pay&Pay se da cuenta de que tu investigación es brillante y que podría llegar lejos con tu estudio, por lo que decide ayudarte. Ese mismo día por la tarde, recibes un mensaje en tu teléfono móvil de la editorial con el contrato que debes firmar:",
+                "&laquo; El investigador acuerda ceder todos los derechos de autor y beneficios económicos generados por el artículo de investigación a la editorial Pay&Pay. Pay&Pay tendrá exclusividad en la comercialización y distribución del artículo, y el escritor renuncia a cualquier participación en las ganancias derivadas de su venta.&raquo;",
+                "Decides:"
             ],
             "acciones": {
-                "FIRMAR": "0A1",
+                "FIRMAR": "0A",
                 "RECHAZAR": "2"
             },
-            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
         },
         {
             "id": "2",
             "tipo": "ACCIÓN",
-            "descripcion": "Escena 2",
+            "descripcion": "Buscar tarjeta",
             "textos": [
-                10,
-                11,
-                38
+                "¡No puedes creer que la editorial quiera quedarse con todos los beneficios de tu investigación! Eres partidario de la Ciencia Abierta: ciencia libre y accesible para todos/as y te niegas a firmar un contrato así. Cierras el correo electrónico y decides encender el ordenador para buscar cómo publicar el resultado de tu investigación en abierto.",
+                "Al pulsar el botón de encendido el ordenador te pide la contraseña de tu usuario para iniciar sesión. ¡Vaya! Justo la cambiaste ayer y no eres capaz de recordar cuál era. Menos mal que la apuntaste en una tarjeta publicitaria y la guardaste en uno de los cajones del escritorio.",
+                "Miras primero en:"
             ],
             "acciones": {
-                "CAJÓN DERECHO": "0B",
+                "CAJÓN DERECHO": "2A",
                 "CAJÓN IZQUIERDO": "3"
             },
-            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
         },
         {
             "id": "2A",
             "tipo": "ACCIÓN",
-            "descripcion": "Escena 2 alternativa",
+            "descripcion": "Cajón vacío",
             "textos": [
-                12,
-                38
+                "No encuentras nada."
             ],
             "acciones": {
-                "CAJÓN DERECHO": "0B",
+                "CERRAR EL CAJÓN": "2B"
+            },
+            "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal.",
+            "img": ""
+        },
+        {
+            "id": "2B",
+            "tipo": "ACCIÓN",
+            "descripcion": "Buscar tarjeta alternativa",
+            "textos": [
+                "Ayer guardaste la tarjeta en uno de los cajones del escritorio pero no la has visto en el cajón derecho.",
+                "Esta vez miras en:"
+            ],
+            "acciones": {
+                "CAJÓN DERECHO": "2A",
                 "CAJÓN IZQUIERDO": "3"
             },
-            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
         },
         {
             "id": "3",
             "tipo": "ACCIÓN",
-            "descripcion": "Escena 3",
+            "descripcion": "Encuentras la tarjeta",
             "textos": [
-                13
+                "¡Ahí estaba! Sacas la tarjeta y lees el texto que tiene escrito:",
+                "&laquo;La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños&raquo;",
+                "Vamos primero a ver qué hora marca el reloj."
             ],
             "acciones": {
-                "8/16": "4"
+                "IR A LA COCINA": "3A",
+                "IR AL RECIBIDOR": "4"
             },
-            "error": "El ordenador carga durante unos segundos y luego aparede un mensaje: 'Contraseña incorrecta. Por favor vuélvalo a intentar.'"
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "3A",
+            "tipo": "ACCIÓN",
+            "descripcion": "¿Cocina?",
+            "textos": [
+                "¿A qué vine yo a la cocina?"
+            ],
+            "acciones": {
+                "VOLVER A LA SALA DEL ORDENADOR": "3B"
+            },
+            "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal.",
+            "img": ""
+        },
+        {
+            "id": "3B",
+            "tipo": "ACCIÓN",
+            "descripcion": "Revisamos la tarjeta",
+            "textos": [
+                "Revisemos qué ponía en la tarjeta:",
+                "&laquo;La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños&raquo;",
+                "Vamos primero a ver qué hora marca el reloj."
+            ],
+            "acciones": {
+                "IR A LA COCINA": "3A",
+                "IR AL RECIBIDOR": "4"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
         },
         {
             "id": "4",
-            "tipo": "ACCIÓN",
-            "descripcion": "Escena 4",
+            "tipo": "TEXTO",
+            "descripcion": "Recibidor",
             "textos": [
-                14,
-                15,
-                16,
-                17,
-                18,
-                19,
-                20,
-                21,
-                22,
-                23
+                "El recibidor es bastante pequeño pero acogedor. En una de sus paredes, se encuentra un reloj cuyas manecillas hace ya tiempo que no funcionan. No recuerdas el día que se detuvieron, pero sí puedes ver que lo hicieron un minuto más tarde de las 5 y media.",
+                "¿Cuáles son los primeros 3 dígitos de la contraseña?"
             ],
             "acciones": {
-                "BIBLIOTECA": "5",
-                "BIBLIOTECA DE LA UNIVERSIDAD DE SEVILLA": "5",
-                "BIBLIOTECA DE LA US": "5",
-                "BUS": "5",
-                "BIBUS": "5"
+                "531": "5"
             },
-            "error": "El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas."
+            "error": "Mmmm... Creo que así no era. Vuélvelo a intentar.",
+            "img": ""
         },
         {
             "id": "5",
             "tipo": "ACCIÓN",
-            "descripcion": "Escena 5",
+            "descripcion": "Vamos a buscar la tarjeta de cumpleaños",
             "textos": [
-                24,
-                25,
-                26,
-                27
+                "¡Genial! Ya tienes los 3 primeros números de la contraseña. Coges de nuevo la tarjeta y vuelves a leer información que ponía sobre la contraseña:",
+                "&laquo;La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños&raquo;",
+                "Vamos a buscar ahora la tarjeta de mi último cumpleaños."
             ],
             "acciones": {
-                "6": "6",
-                "SEIS": "6"
+                "IR A LA COCINA": "5A",
+                "IR AL DORMITORIO": "6"
             },
-            "error": "El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas."
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "5A",
+            "tipo": "ACCIÓN",
+            "descripcion": "¿Cocina?",
+            "textos": [
+                "¿Qué vine yo a hacer a la cocina?"
+            ],
+            "acciones": {
+                "VOLVER A LA SALA DEL ORDENADOR": "5"
+            },
+            "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal.",
+            "img": ""
         },
         {
             "id": "6",
             "tipo": "ACCIÓN",
-            "descripcion": "Escena 6",
+            "descripcion": "Dormitorio",
             "textos": [
-                28,
-                29,
-                30,
-                39
+                "El dormitorio está muy desordenado, a diferencia del resto de la casa. No eres una persona que acostumbre a guardar cosas que no usas, pero el dormitorio parece ser una excepción.",
+                "La mesita de noche tiene dos cajones. Decides buscar en:"
             ],
             "acciones": {
-                "ESCONDERTE DEBAJO DE LA MESA": "0C",
-                "SALIR CORRIENDO POR LA PUERTA": "7"
+                "PRIMER CAJÓN": "7",
+                "SEGUNDO CAJÓN": "6A"
             },
-            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
         },
         {
             "id": "6A",
             "tipo": "ACCIÓN",
-            "descripcion": "Escena 6 alternativa",
+            "descripcion": "Abrir segundo cajón",
             "textos": [
-                30,
-                39
+                "¡Buf! Definitivamente deberías ordenar este cajón. Hay un libro, una flor seca, dos paquetes de pañuelos, unas gafas de lectura y.... no, no hay más nada. Parece que no guardaste aquí la tarjeta de cumpleaños."
             ],
             "acciones": {
-                "ESCONDERTE DEBAJO DE LA MESA": "0A1",
-                "SALIR CORRIENDO POR LA PUERTA": "7"
+                "ABRIR EL SEGUNDO CAJÓN": "7",
+                "IR A LA COCINA": "6B"
             },
-            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "6B",
+            "tipo": "ACCIÓN",
+            "descripcion": "¿Cocina?",
+            "textos": [
+                "¿Por qué estoy aquí de nuevo?"
+            ],
+            "acciones": {
+                "VOLVER AL DORMITORIO": "6"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
         },
         {
             "id": "7",
             "tipo": "ACCIÓN",
-            "descripcion": "Escena 7",
+            "descripcion": "Abrir primer cajón",
             "textos": [
-                31,
-                32,
-                40
+                "El primer cajón está completamente lleno de papeles. Por suerte para ti, la tarjeta de cumpleaños es lo suficientemente colorida como para encontrarla en apenas unos segundos.",
+                "En la portada tiene dibujadas 7 estrellas amarillas.",
+                "Decides:"
             ],
             "acciones": {
-                "COPYRIGHT TRADICIONAL": "0A2",
-                "CREATIVE COMMONS": "8"
+                "PROBAR EL NÚMERO 7": "7A",
+                "VOLTEAR LA TARJETA": "8"
             },
-            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba."
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "7A",
+            "tipo": "ACCIÓN",
+            "descripcion": "Escribes la contraseña incorrecta",
+            "textos": [
+                "Te dirijes rápidamente al ordenador y escribes la contraseña: La hora era 531 y eran 7 estrellas...",
+                "Escribes 5317, pulsas INTRO y en el ordenador aparece un mensaje: &laquo;Contraseña incorrecta, vuélvalo a intentar&raquo;"
+            ],
+            "acciones": {
+                "IR A LA COCINA": "7B",
+                "VOLVER A MIRAR LA TARJETA DE CUMPLEAÑOS": "7A1"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "7A1",
+            "tipo": "ACCIÓN",
+            "descripcion": "Vuelves a mirar la tarjeta",
+            "textos": [
+                "Vuelves al dormitorio y coges la tarjeta de cumpleaños que dejaste allí.",
+                "En la portada tiene dibujadas 7 estrellas amarillas."
+            ],
+            "acciones": {
+                "Voltear la tarjeta": "8"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "7B",
+            "tipo": "ACCIÓN",
+            "descripcion": "¿Cocina?",
+            "textos": [
+                "En serio, ¿otra vez en la cocina?",
+                "Sin embargo...",
+                "Justo cuando te ibas a dar la vuelta, te fijas en una cosa que no viste antes: En el frigorífico hay pegado un papel rosa."
+            ],
+            "acciones": {
+                "IGNORARLO": "7A1",
+                "LEERLO": "7C"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "7C",
+            "tipo": "ACCIÓN",
+            "descripcion": "Lees papel rosa",
+            "textos": [
+                "&laquo;Contraseña nueva del ordenador: 5312&raquo;"
+            ],
+            "acciones": {
+                "PROBAR LA CONTRASEÑA 5312": "11"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
         },
         {
             "id": "8",
             "tipo": "ACCIÓN",
-            "descripcion": "Escena 8",
+            "descripcion": "Parte de atrás de la tarjeta",
             "textos": [
-                33,
-                34
+                "En la parte de atrás de la tarjeta solo hay un texto que dice &laquo;Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños&raquo;.",
+                "En las noches más oscuras..."
+            ],
+            "acciones": {
+                "ACERCARTE A LA VENTANA": "9",
+                "APAGAR LAS LUCES": "8A"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "8A",
+            "tipo": "ACCIÓN",
+            "descripcion": "Apagar luces mal",
+            "textos": [
+                "Mmmm... No ves ningún cambio..."
+            ],
+            "acciones": {
+                "ACERCARTE A LA VENTANA": "9",
+                "APAGAR LAS LUCES": "8A"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "9",
+            "tipo": "ACCIÓN",
+            "descripcion": "Acercar ventana",
+            "textos": [
+                "Mmmm... No ves ningún cambio... Quizás..."
+            ],
+            "acciones": {
+                "ACERCARTE A LA VENTANA": "9",
+                "APAGAR LAS LUCES": "10"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "10",
+            "tipo": "TEXTO",
+            "descripcion": "",
+            "textos": [
+                "¡Ah! Eso era: primero había que acercarse a la ventana para activar la pintura luminiscente y luego apagar las luces para poder ver el brillo.",
+                "En la tarjeta se han iluminado únicamente 2 estrellas. Teniendo en cuenta que los primeros 3 dígitos eran 531, la contraseña del ordenador será..."
+            ],
+            "acciones": {
+                "5312": "11"
+            },
+            "error": "Mmmm... Creo que así no era. Vuélvelo a intentar.",
+            "img": ""
+        },
+        {
+            "id": "11",
+            "tipo": "TEXTO",
+            "descripcion": "Ordenador encendido. Te vas a la universidad.",
+            "textos": [
+                "El ordenador parece cargar durante unos segundos y finalmente se termina de encender. Sólo nos queda abrir el navegador y... ¡un momento! No tienes conexión a internet. ¿Qué está ocurriendo? Justo en ese momento te suena el teléfono: es el director de la editorial, te ha enviado un nuevo mensaje:",
+                "&laquo;Ya he visto que has decidido no firmar el contrato que te he enviado. No pienso permitir que publiques la investigación en abierto, así que me he tomado la molestia de cortarte el acceso a internet. ¡Te voy a robar la investigación y publicarla bajo el nombre de la editorial!&raquo;",
+                "Coges tus cosas y decides salir corriendo en dirección a la Universidad. Allí seguro que tienen conexión a internet. De camino a la universidad, ves que el director de la editorial te va siguiendo por la calle, por lo que decides comenzar a correr hasta llegar al laboratorio en el que trabajas. Nada más cerrar la puerta del laboratorio, decides llamar a Alba, tu mejor amiga:",
+                "Tú:     Hola, el tirano me ha cortado el acceso a Internet y no puedo acceder a mis documentos, ¿me puedes ayudar?",
+                "Alba:   Sí, ¿qué puedo hacer por ti?",
+                "Tú:     Necesito que…",
+                "Alba:   ¡¡¡Habla más fuerte, que no te oigo!!!",
+                "Acabo de entrar al laboratorio y tengo al tirano dando golpes en la puerta queriendo entrar, ¡no quiero que me escuche!. Necesito que te pongas en contacto con la Universidad de Sevilla para que nos asesoren en temas de publicación en abierto, propiedad intelectual, licencias Creative Commons, etc., para poder compartir mi investigación y generar mayor impacto en la sociedad.",
+                "Alba:   Vale, dame 2 minutos que me  ponga en contacto con ellos y ahora te devuelvo la llamada.",
+                "¿Con qué servicio de la <a href='https://www.us.es'>Universidad de Sevilla</a> tendrá Alba que ponerse en contacto?"
+            ],
+            "acciones": {
+                "BIBLIOTECA": "12",
+                "BIBLIOTECA DE LA UNIVERSIDAD DE SEVILLA": "12",
+                "BIBLIOTECA DE LA US": "12",
+                "BUS": "12",
+                "BIBUS": "12"
+            },
+            "error": "El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas..",
+            "img": ""
+        },
+        {
+            "id": "12",
+            "tipo": "TEXTO",
+            "descripcion": "¿Cuántas comunidades?",
+            "textos": [
+                "A los pocos minutos recibes una llamada a tu teléfono: es Alba, que ya ha hablado con la Biblioteca de la Universdad de Sevilla y ha recibido toda la información que necesitas.",
+                "Alba:   En su web tienen disponible mucha información para investigar y publicar, tienen un grupo de apoyo a la investigación, un grupo de Ciencia Abierta y un grupo de gestión de datos de investigación. Te envío por mensaje la URL de la página que debes consultar. ¡Mucha suerte!",
+                "Acto seguido finaliza la llamada telefónica y recibes en tu teléfono la dirección URL de la web donde encontrarás toda la información que necesitas: https://idus.us.es/",
+                "¿Cuántas comunidades diferentes podemos encontrar en <a href='https://idus.us.es/'>idUS</a>?"
+            ],
+            "acciones": {
+                "6": "13",
+                "VI": "13",
+                "SEIS": "13",
+                "SIX": "13",
+                "sechs": "13",
+                "шест": "13",
+                "šest": "13",
+                "六": "13",
+                "여섯": "13",
+                "seks": "13",
+                "šesť": "13",
+                "kuus": "13",
+                "kuusi": "13",
+                "έξι": "13",
+                "hat": "13",
+                "enam": "13",
+                "sei": "13",
+                "seši": "13",
+                "šešios": "13",
+                "zes": "13",
+                "sześć": "13",
+                "șase": "13",
+                "шесть": "13",
+                "sex": "13",
+                "altı": "13",
+                "шість": "13"
+            },
+            "error": "El director de la editorial golpea más fuerte la puerta; creo que ese no es el número correcto.",
+            "img": ""
+        },
+        {
+            "id": "13",
+            "tipo": "ACCIÓN",
+            "descripcion": "¡Te ha pillado!",
+            "textos": [
+                "Usando el Depósito de Investigación de la Universidad de Sevilla podrás conseguir no solo tener una mayor visibilidad, uso e impacto, sino que obtendrás mayor reconocimiento como autor, al ser más difundido y citado, garantizando además la preservación de tu investigación.",
+                "De repente  se escucha un ruido muy fuerte proveniente de la puerta: ¡es el director de la editorial, que ha conseguido derribar la puerta y te está buscando para robarte los documentos de tu investigación!",
+                "¡Rápido! ¡Debes actuar ya!"
+            ],
+            "acciones": {
+                "ESCONDERTE BAJO LA MESA": "13A",
+                "SALIR CORRIENDO POR LA PUERTA": "14"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "13A",
+            "tipo": "ACCIÓN",
+            "descripcion": "Segunda oportunidad",
+            "textos": [
+                "El director de la editorial parece que te ha leído la mente y está a punto de atraparte.",
+                "¡Rápido! ¿Qué decides hacer?"
+            ],
+            "acciones": {
+                "ESCONDERTE BAJO LA MESA": "0A",
+                "SALIR CORRIENDO POR LA PUERTA": "14"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "14",
+            "tipo": "ACCIÓN",
+            "descripcion": "Copyright",
+            "textos": [
+                "Consigues salir por la puerta y te diriges a toda velocidad a la Biblioteca de la Universidad más cercana. Allí te permitirán entregar el resultado de todos tus años de investigación y podrás publicarlo en Ciencia Abierta antes de que el director de la editorial te atrape.",
+                "Nada más llegar a la biblioteca, solicitas uno de los portátiles de préstamo que la Biblioteca de la Universidad de Sevilla tiene a disposición de los estudiantes e investigadores. Estás a punto de publicar tu artículo pero... necesitas indicar el tipo de licencia en el que publicar tu investigación."
+            ],
+            "acciones": {
+                "COPYRIGHT TRADICIONAL": "0B",
+                "CREATIVE COMMONS": "15"
+            },
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
+        },
+        {
+            "id": "15",
+            "tipo": "FINAL",
+            "descripcion": "Fin",
+            "textos": [
+                "Justo al pulsar el botón de enviar aparece el director de la editorial por la puerta. Intenta abalanzarte sobre ti pero ya es demasiado tarde: el resultado de tu investigación está ya publicado bajo una licencia Creative Comons que permite copiar, reproducir, distribuir y comunicar públicamente la obra, siempre y cuando se citen y reconozcan a los autores originales. No se permite, sin embargo, utilizar esta obra para fines comerciales ni la creación de obras derivadas de la misma.",
+                "¡Enhorabuena! Has publicado tu investigación con éxito y has derrotado al malvado director de la editorial Pay&Pay."
             ],
             "acciones": {},
-            "error": "Has terminado el juego con éxito. Puedes cerrar la página o recargar la página para volver a empezar."
+            "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
+            "img": ""
         }
     ]
 }
