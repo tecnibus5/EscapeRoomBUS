@@ -8,7 +8,7 @@
     "acciones":{
     },
     "error":"Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez.",
-    "img":""
+    "img":"./assets/img/game/escena_0A.png"
 },
 {
     "id":"0B",
@@ -20,7 +20,7 @@
     "acciones":{
     },
     "error":"Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez.",
-    "img":""
+    "img":"./assets/img/game/escena_0B.png"
 },
 {
     "id":"1",
@@ -37,7 +37,7 @@
         "RECHAZAR":"2"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_1.png"
 },
 {
     "id":"2",
@@ -53,7 +53,7 @@
         "CAJÓN IZQUIERDO":"3"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_2.png"
 },
 {
     "id":"2A",
@@ -66,7 +66,7 @@
         "CERRAR EL CAJÓN":"2B"
     },
     "error":"Este mensaje no debería aparecer, si aparece es que algo ha ido mal.",
-    "img":""
+    "img":"./assets/img/game/escena_2A.png"
 },
 {
     "id":"2B",
@@ -80,7 +80,7 @@
         "CAJÓN IZQUIERDO":"3"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_2B.png"
 },
 {
     "id":"3",
@@ -96,7 +96,7 @@
         "IR AL RECIBIDOR":"4"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_3.png"
 },
 {
     "id":"3A",
@@ -109,7 +109,7 @@
         "VOLVER A LA SALA DEL ORDENADOR":"3B"
     },
     "error":"Este mensaje no debería aparecer, si aparece es que algo ha ido mal.",
-    "img":""
+    "img":"./assets/img/game/escena_3A.png"
 },
 {
     "id":"3B",
@@ -125,7 +125,7 @@
         "IR AL RECIBIDOR":"4"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_3B.png"
 },
 {
     "id":"4",
@@ -139,7 +139,7 @@
         "531":"5"
     },
     "error":"Mmmm... Creo que así no era. Vuélvelo a intentar.",
-    "img":""
+    "img":"./assets/img/game/escena_4.png"
 },
 {
     "id":"5",
@@ -155,7 +155,7 @@
         "IR AL DORMITORIO":"6"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_5.png"
 },
 {
     "id":"5A",
@@ -168,7 +168,7 @@
         "VOLVER A LA SALA DEL ORDENADOR":"5"
     },
     "error":"Este mensaje no debería aparecer, si aparece es que algo ha ido mal.",
-    "img":""
+    "img":"./assets/img/game/escena_5A.png"
 },
 {
     "id":"6",
@@ -183,7 +183,7 @@
         "SEGUNDO CAJÓN":"6A"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_6.png"
 },
 {
     "id":"6A",
@@ -197,7 +197,7 @@
         "IR A LA COCINA":"6B"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_6A.png"
 },
 {
     "id":"6B",
@@ -210,7 +210,7 @@
         "VOLVER AL DORMITORIO":"6"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_6B.png"
 },
 {
     "id":"7",
@@ -226,7 +226,7 @@
         "VOLTEAR LA TARJETA":"8"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_7.png"
 },
 {
     "id":"7A",
@@ -241,7 +241,7 @@
         "VOLVER A MIRAR LA TARJETA DE CUMPLEAÑOS":"7A1"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_7A.png"
 },
 {
     "id":"7A1",
@@ -255,7 +255,7 @@
         "Voltear la tarjeta":"8"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_7A1.png"
 },
 {
     "id":"7B",
@@ -271,7 +271,7 @@
         "LEERLO":"7C"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_7B.png"
 },
 {
     "id":"7C",
@@ -284,7 +284,7 @@
         "PROBAR LA CONTRASEÑA 5312":"11"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_7C.png"
 },
 {
     "id":"8",
@@ -299,7 +299,7 @@
         "APAGAR LAS LUCES":"8A"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_8.png"
 },
 {
     "id":"8A",
@@ -313,7 +313,7 @@
         "APAGAR LAS LUCES":"8A"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_8A.png"
 },
 {
     "id":"9",
@@ -327,7 +327,7 @@
         "APAGAR LAS LUCES":"10"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_9.png"
 },
 {
     "id":"10",
@@ -341,7 +341,7 @@
         "5312":"11"
     },
     "error":"Mmmm... Creo que así no era. Vuélvelo a intentar.",
-    "img":""
+    "img":"./assets/img/game/escena_10.png"
 },
 {
     "id":"11",
@@ -367,7 +367,7 @@
         "BIBUS":"12"
     },
     "error":"El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas..",
-    "img":""
+    "img":"./assets/img/game/escena_11.png"
 },
 {
     "id":"12",
@@ -408,7 +408,7 @@
         "шість":"13"
     },
     "error":"El director de la editorial golpea más fuerte la puerta; creo que ese no es el número correcto.",
-    "img":""
+    "img":"./assets/img/game/escena_12.png"
 },
 {
     "id":"13",
@@ -424,7 +424,7 @@
         "SALIR CORRIENDO POR LA PUERTA":"14"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_13.png"
 },
 {
     "id":"13A",
@@ -439,7 +439,7 @@
         "SALIR CORRIENDO POR LA PUERTA":"14"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_13A.png"
 },
 {
     "id":"14",
@@ -454,7 +454,7 @@
         "CREATIVE COMMONS":"15"
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_14.png"
 },
 {
     "id":"15",
@@ -467,5 +467,5 @@
     "acciones":{
     },
     "error":"No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-    "img":""
+    "img":"./assets/img/game/escena_15.png"
 }]
