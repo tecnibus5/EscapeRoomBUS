@@ -13,7 +13,7 @@
             ],
             "acciones": {},
             "error": "Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez.",
-            "img": ""
+            "img": "./assets/img/game/escena_0A.png"
         },
         {
             "id": "0B",
@@ -24,7 +24,7 @@
             ],
             "acciones": {},
             "error": "Debes volver a empezar la partida. Elige tus acciones más sabiamente la próxima vez.",
-            "img": ""
+            "img": "./assets/img/game/escena_0B.png"
         },
         {
             "id": "1",
@@ -33,7 +33,7 @@
             "textos": [
                 "Eres un investigador de la Universidad de Sevilla que está trabajando en la vacuna contra el cáncer de mama. No tienes apenas recursos ni nadie que colabore contigo, pero tu intuición te dice que vas por buen camino. Para continuar con tu investigación, te planteas solicitar ayuda a una editorial.",
                 "La editorial Pay&Pay se da cuenta de que tu investigación es brillante y que podría llegar lejos con tu estudio, por lo que decide ayudarte. Ese mismo día por la tarde, recibes un mensaje en tu teléfono móvil de la editorial con el contrato que debes firmar:",
-                "&laquo; El investigador acuerda ceder todos los derechos de autor y beneficios económicos generados por el artículo de investigación a la editorial Pay&Pay. Pay&Pay tendrá exclusividad en la comercialización y distribución del artículo, y el escritor renuncia a cualquier participación en las ganancias derivadas de su venta.&raquo;",
+                "<< El investigador acuerda ceder todos los derechos de autor y beneficios económicos generados por el artículo de investigación a la editorial Pay&Pay. Pay&Pay tendrá exclusividad en la comercialización y distribución del artículo, y el escritor renuncia a cualquier participación en las ganancias derivadas de su venta.>>",
                 "Decides:"
             ],
             "acciones": {
@@ -41,7 +41,7 @@
                 "RECHAZAR": "2"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_1.png"
         },
         {
             "id": "2",
@@ -57,7 +57,7 @@
                 "CAJÓN IZQUIERDO": "3"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_2.png"
         },
         {
             "id": "2A",
@@ -70,22 +70,21 @@
                 "CERRAR EL CAJÓN": "2B"
             },
             "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal.",
-            "img": ""
+            "img": "./assets/img/game/escena_2A.png"
         },
         {
             "id": "2B",
             "tipo": "ACCIÓN",
             "descripcion": "Buscar tarjeta alternativa",
             "textos": [
-                "Ayer guardaste la tarjeta en uno de los cajones del escritorio pero no la has visto en el cajón derecho.",
-                "Esta vez miras en:"
+                "Ayer guardaste la tarjeta en uno de los cajones del escritorio pero no la has visto en el cajón derecho. Esta vez miras en:"
             ],
             "acciones": {
                 "CAJÓN DERECHO": "2A",
                 "CAJÓN IZQUIERDO": "3"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_2B.png"
         },
         {
             "id": "3",
@@ -93,7 +92,7 @@
             "descripcion": "Encuentras la tarjeta",
             "textos": [
                 "¡Ahí estaba! Sacas la tarjeta y lees el texto que tiene escrito:",
-                "&laquo;La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños&raquo;",
+                "<<La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños>>",
                 "Vamos primero a ver qué hora marca el reloj."
             ],
             "acciones": {
@@ -101,7 +100,7 @@
                 "IR AL RECIBIDOR": "4"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_3.png"
         },
         {
             "id": "3A",
@@ -114,7 +113,7 @@
                 "VOLVER A LA SALA DEL ORDENADOR": "3B"
             },
             "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal.",
-            "img": ""
+            "img": "./assets/img/game/escena_3A.png"
         },
         {
             "id": "3B",
@@ -122,7 +121,7 @@
             "descripcion": "Revisamos la tarjeta",
             "textos": [
                 "Revisemos qué ponía en la tarjeta:",
-                "&laquo;La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños&raquo;",
+                "<<La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños>>",
                 "Vamos primero a ver qué hora marca el reloj."
             ],
             "acciones": {
@@ -130,7 +129,7 @@
                 "IR AL RECIBIDOR": "4"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_3B.png"
         },
         {
             "id": "4",
@@ -144,7 +143,7 @@
                 "531": "5"
             },
             "error": "Mmmm... Creo que así no era. Vuélvelo a intentar.",
-            "img": ""
+            "img": "./assets/img/game/escena_4.png"
         },
         {
             "id": "5",
@@ -152,7 +151,7 @@
             "descripcion": "Vamos a buscar la tarjeta de cumpleaños",
             "textos": [
                 "¡Genial! Ya tienes los 3 primeros números de la contraseña. Coges de nuevo la tarjeta y vuelves a leer información que ponía sobre la contraseña:",
-                "&laquo;La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños&raquo;",
+                "<<La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños>>",
                 "Vamos a buscar ahora la tarjeta de mi último cumpleaños."
             ],
             "acciones": {
@@ -160,7 +159,7 @@
                 "IR AL DORMITORIO": "6"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_5.png"
         },
         {
             "id": "5A",
@@ -173,7 +172,7 @@
                 "VOLVER A LA SALA DEL ORDENADOR": "5"
             },
             "error": "Este mensaje no debería aparecer, si aparece es que algo ha ido mal.",
-            "img": ""
+            "img": "./assets/img/game/escena_5A.png"
         },
         {
             "id": "6",
@@ -188,7 +187,7 @@
                 "SEGUNDO CAJÓN": "6A"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_6.png"
         },
         {
             "id": "6A",
@@ -202,7 +201,7 @@
                 "IR A LA COCINA": "6B"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_6A.png"
         },
         {
             "id": "6B",
@@ -215,7 +214,7 @@
                 "VOLVER AL DORMITORIO": "6"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_6B.png"
         },
         {
             "id": "7",
@@ -231,7 +230,7 @@
                 "VOLTEAR LA TARJETA": "8"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_7.png"
         },
         {
             "id": "7A",
@@ -239,14 +238,14 @@
             "descripcion": "Escribes la contraseña incorrecta",
             "textos": [
                 "Te dirijes rápidamente al ordenador y escribes la contraseña: La hora era 531 y eran 7 estrellas...",
-                "Escribes 5317, pulsas INTRO y en el ordenador aparece un mensaje: &laquo;Contraseña incorrecta, vuélvalo a intentar&raquo;"
+                "Escribes 5317, pulsas INTRO y en el ordenador aparece un mensaje: <<Contraseña incorrecta, vuélvalo a intentar>>"
             ],
             "acciones": {
                 "IR A LA COCINA": "7B",
                 "VOLVER A MIRAR LA TARJETA DE CUMPLEAÑOS": "7A1"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_7A.png"
         },
         {
             "id": "7A1",
@@ -260,7 +259,7 @@
                 "Voltear la tarjeta": "8"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_7A1.png"
         },
         {
             "id": "7B",
@@ -276,27 +275,27 @@
                 "LEERLO": "7C"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_7B.png"
         },
         {
             "id": "7C",
             "tipo": "ACCIÓN",
             "descripcion": "Lees papel rosa",
             "textos": [
-                "&laquo;Contraseña nueva del ordenador: 5312&raquo;"
+                "<<Contraseña nueva del ordenador: 5312>>"
             ],
             "acciones": {
                 "PROBAR LA CONTRASEÑA 5312": "11"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_7C.png"
         },
         {
             "id": "8",
             "tipo": "ACCIÓN",
             "descripcion": "Parte de atrás de la tarjeta",
             "textos": [
-                "En la parte de atrás de la tarjeta solo hay un texto que dice &laquo;Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños&raquo;.",
+                "En la parte de atrás de la tarjeta solo hay un texto que dice <<Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños>>.",
                 "En las noches más oscuras..."
             ],
             "acciones": {
@@ -304,7 +303,7 @@
                 "APAGAR LAS LUCES": "8A"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_8.png"
         },
         {
             "id": "8A",
@@ -318,7 +317,7 @@
                 "APAGAR LAS LUCES": "8A"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_8A.png"
         },
         {
             "id": "9",
@@ -332,7 +331,7 @@
                 "APAGAR LAS LUCES": "10"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_9.png"
         },
         {
             "id": "10",
@@ -346,7 +345,7 @@
                 "5312": "11"
             },
             "error": "Mmmm... Creo que así no era. Vuélvelo a intentar.",
-            "img": ""
+            "img": "./assets/img/game/escena_10.png"
         },
         {
             "id": "11",
@@ -354,7 +353,7 @@
             "descripcion": "Ordenador encendido. Te vas a la universidad.",
             "textos": [
                 "El ordenador parece cargar durante unos segundos y finalmente se termina de encender. Sólo nos queda abrir el navegador y... ¡un momento! No tienes conexión a internet. ¿Qué está ocurriendo? Justo en ese momento te suena el teléfono: es el director de la editorial, te ha enviado un nuevo mensaje:",
-                "&laquo;Ya he visto que has decidido no firmar el contrato que te he enviado. No pienso permitir que publiques la investigación en abierto, así que me he tomado la molestia de cortarte el acceso a internet. ¡Te voy a robar la investigación y publicarla bajo el nombre de la editorial!&raquo;",
+                "<<Ya he visto que has decidido no firmar el contrato que te he enviado. No pienso permitir que publiques la investigación en abierto, así que me he tomado la molestia de cortarte el acceso a internet. ¡Te voy a robar la investigación y publicarla bajo el nombre de la editorial!>>",
                 "Coges tus cosas y decides salir corriendo en dirección a la Universidad. Allí seguro que tienen conexión a internet. De camino a la universidad, ves que el director de la editorial te va siguiendo por la calle, por lo que decides comenzar a correr hasta llegar al laboratorio en el que trabajas. Nada más cerrar la puerta del laboratorio, decides llamar a Alba, tu mejor amiga:",
                 "Tú:     Hola, el tirano me ha cortado el acceso a Internet y no puedo acceder a mis documentos, ¿me puedes ayudar?",
                 "Alba:   Sí, ¿qué puedo hacer por ti?",
@@ -372,7 +371,7 @@
                 "BIBUS": "12"
             },
             "error": "El director de la editorial golpea más fuerte la puerta; creo que ahí no encontrarás la información que buscas..",
-            "img": ""
+            "img": "./assets/img/game/escena_11.png"
         },
         {
             "id": "12",
@@ -413,7 +412,7 @@
                 "шість": "13"
             },
             "error": "El director de la editorial golpea más fuerte la puerta; creo que ese no es el número correcto.",
-            "img": ""
+            "img": "./assets/img/game/escena_12.png"
         },
         {
             "id": "13",
@@ -429,7 +428,7 @@
                 "SALIR CORRIENDO POR LA PUERTA": "14"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_13.png"
         },
         {
             "id": "13A",
@@ -444,7 +443,7 @@
                 "SALIR CORRIENDO POR LA PUERTA": "14"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_13A.png"
         },
         {
             "id": "14",
@@ -459,7 +458,7 @@
                 "CREATIVE COMMONS": "15"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_14.png"
         },
         {
             "id": "15",
@@ -471,7 +470,7 @@
             ],
             "acciones": {},
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
-            "img": ""
+            "img": "./assets/img/game/escena_15.png"
         }
     ]
 }
