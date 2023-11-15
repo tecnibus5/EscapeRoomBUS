@@ -188,6 +188,7 @@ form {
 }
 
 .game-text-input {
+    height: 36px;
     flex-grow: 3;
     border-width: 1px 0 1px 1px;
     border-color: #dddddd;
@@ -195,6 +196,7 @@ form {
 }
 
 .game-text-input:focus {
+    height: 36px;
     box-sizing: border-box;
     outline: 0;
     border-width: 1px 0 1px 1px;
