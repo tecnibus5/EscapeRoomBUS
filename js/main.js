@@ -64,6 +64,8 @@ function is_auto_scene(scene) {
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
+    let bookSeparator = document.getElementById('book-separator');
+    bookSeparator.classList.add('d-none');
     let dataList = await load_game();
     let startButton = document.getElementById('btn-start-game');
     startButton.addEventListener('click',() => main(dataList));
@@ -93,7 +95,8 @@ async function load_game() {
     let inicioText = document.getElementById('inicio-texto');
 
     // Add cover image, text and start button
-    inicioText.insertAdjacentHTML('afterbegin',`<h2 class="cover-text cover-subtitle">Elige tu propia aventura</h1>`);
+    inicioText.insertAdjacentHTML('afterbegin',`<h3 class="cover-text cover-authors">Por ${cover['autores']}</h3>`);
+    inicioText.insertAdjacentHTML('afterbegin',`<h2 class="cover-text cover-subtitle">Elige tu propia aventura</h2>`);
     inicioText.insertAdjacentHTML('afterbegin',`<h1 class="cover-text cover-title">${cover['titulo']}</h1>`);
     inicioDiv.insertAdjacentHTML('afterbegin',`<div class="div-cover-img"><img src="${cover['img']}" alt="Portada" class="cover-img"></div>`);
 
@@ -128,6 +131,8 @@ async function load_pictures(scenes) {
 async function main(dataList) {
     let scenes = dataList[1];
     document.getElementById('inicio-juego').remove();
+    let bookSeparator = document.getElementById('book-separator');
+    bookSeparator.classList.remove('d-none');
 
     let inputArea = document.getElementById('action-selectors');
     let gameScreen = document.getElementById('game');

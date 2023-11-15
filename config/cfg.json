@@ -1,6 +1,7 @@
 {
     "portada": {
         "titulo": "La gran aventura",
+        "autores": "Patricia, Gonzalo y Álvaro",
         "img": "../assets/img/game/portada.png"
     },
     "escenas": [
