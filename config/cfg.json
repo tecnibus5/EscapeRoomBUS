@@ -1,7 +1,7 @@
 {
     "portada": {
         "titulo": "La gran aventura",
-        "img": "../assets/img/game/cover.png"
+        "img": "../assets/img/game/portada.png"
     },
     "escenas": [
         {
@@ -33,7 +33,7 @@
             "textos": [
                 "Eres un investigador de la Universidad de Sevilla que está trabajando en la vacuna contra el cáncer de mama. No tienes apenas recursos ni nadie que colabore contigo, pero tu intuición te dice que vas por buen camino. Para continuar con tu investigación, te planteas solicitar ayuda a una editorial.",
                 "La editorial Pay&Pay se da cuenta de que tu investigación es brillante y que podría llegar lejos con tu estudio, por lo que decide ayudarte. Ese mismo día por la tarde, recibes un mensaje en tu teléfono móvil de la editorial con el contrato que debes firmar:",
-                "<< El investigador acuerda ceder todos los derechos de autor y beneficios económicos generados por el artículo de investigación a la editorial Pay&Pay. Pay&Pay tendrá exclusividad en la comercialización y distribución del artículo, y el escritor renuncia a cualquier participación en las ganancias derivadas de su venta.>>",
+                "&laquo; El investigador acuerda ceder todos los derechos de autor y beneficios económicos generados por el artículo de investigación a la editorial Pay&Pay. Pay&Pay tendrá exclusividad en la comercialización y distribución del artículo, y el escritor renuncia a cualquier participación en las ganancias derivadas de su venta.&raquo;",
                 "Decides:"
             ],
             "acciones": {
@@ -92,7 +92,7 @@
             "descripcion": "Encuentras la tarjeta",
             "textos": [
                 "¡Ahí estaba! Sacas la tarjeta y lees el texto que tiene escrito:",
-                "<<La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños>>",
+                "&laquo;La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños&raquo;",
                 "Vamos primero a ver qué hora marca el reloj."
             ],
             "acciones": {
@@ -121,7 +121,7 @@
             "descripcion": "Revisamos la tarjeta",
             "textos": [
                 "Revisemos qué ponía en la tarjeta:",
-                "<<La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños>>",
+                "&laquo;La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños&raquo;",
                 "Vamos primero a ver qué hora marca el reloj."
             ],
             "acciones": {
@@ -151,7 +151,7 @@
             "descripcion": "Vamos a buscar la tarjeta de cumpleaños",
             "textos": [
                 "¡Genial! Ya tienes los 3 primeros números de la contraseña. Coges de nuevo la tarjeta y vuelves a leer información que ponía sobre la contraseña:",
-                "<<La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños>>",
+                "&laquo;La contraseña está formada por 4 números. Los primeros 3 números se corresponden a la hora que marca el reloj del recibidor. El último dígito está en la tarjeta de felicitación de mi último cumpleaños&raquo;",
                 "Vamos a buscar ahora la tarjeta de mi último cumpleaños."
             ],
             "acciones": {
@@ -197,7 +197,7 @@
                 "¡Buf! Definitivamente deberías ordenar este cajón. Hay un libro, una flor seca, dos paquetes de pañuelos, unas gafas de lectura y.... no, no hay más nada. Parece que no guardaste aquí la tarjeta de cumpleaños."
             ],
             "acciones": {
-                "ABRIR EL SEGUNDO CAJÓN": "7",
+                "ABRIR EL PRIMER CAJÓN": "7",
                 "IR A LA COCINA": "6B"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
@@ -238,11 +238,11 @@
             "descripcion": "Escribes la contraseña incorrecta",
             "textos": [
                 "Te dirijes rápidamente al ordenador y escribes la contraseña: La hora era 531 y eran 7 estrellas...",
-                "Escribes 5317, pulsas INTRO y en el ordenador aparece un mensaje: <<Contraseña incorrecta, vuélvalo a intentar>>"
+                "Escribes 5317, pulsas INTRO y en el ordenador aparece un mensaje: &laquo;Contraseña incorrecta, vuélvalo a intentar&raquo;"
             ],
             "acciones": {
                 "IR A LA COCINA": "7B",
-                "VOLVER A MIRAR LA TARJETA DE CUMPLEAÑOS": "7A1"
+                "VOLVER A VER LA TARJETA": "7A1"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
             "img": "./assets/img/game/escena_7A.png"
@@ -256,7 +256,7 @@
                 "En la portada tiene dibujadas 7 estrellas amarillas."
             ],
             "acciones": {
-                "Voltear la tarjeta": "8"
+                "VOLTEAR LA TARJETA": "8"
             },
             "error": "No entiendo lo que dices, tienes que escribir una de las opciones mostradas arriba.",
             "img": "./assets/img/game/escena_7A1.png"
@@ -282,7 +282,7 @@
             "tipo": "ACCIÓN",
             "descripcion": "Lees papel rosa",
             "textos": [
-                "<<Contraseña nueva del ordenador: 5312>>"
+                "&laquo;Contraseña nueva del ordenador: 5312&raquo;"
             ],
             "acciones": {
                 "PROBAR LA CONTRASEÑA 5312": "11"
@@ -295,7 +295,7 @@
             "tipo": "ACCIÓN",
             "descripcion": "Parte de atrás de la tarjeta",
             "textos": [
-                "En la parte de atrás de la tarjeta solo hay un texto que dice <<Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños>>.",
+                "En la parte de atrás de la tarjeta solo hay un texto que dice &laquo;Incluso en las más oscuras noches encontrarás el camino que te guíe. Feliz cumpleaños&raquo;.",
                 "En las noches más oscuras..."
             ],
             "acciones": {
@@ -353,7 +353,7 @@
             "descripcion": "Ordenador encendido. Te vas a la universidad.",
             "textos": [
                 "El ordenador parece cargar durante unos segundos y finalmente se termina de encender. Sólo nos queda abrir el navegador y... ¡un momento! No tienes conexión a internet. ¿Qué está ocurriendo? Justo en ese momento te suena el teléfono: es el director de la editorial, te ha enviado un nuevo mensaje:",
-                "<<Ya he visto que has decidido no firmar el contrato que te he enviado. No pienso permitir que publiques la investigación en abierto, así que me he tomado la molestia de cortarte el acceso a internet. ¡Te voy a robar la investigación y publicarla bajo el nombre de la editorial!>>",
+                "&laquo;Ya he visto que has decidido no firmar el contrato que te he enviado. No pienso permitir que publiques la investigación en abierto, así que me he tomado la molestia de cortarte el acceso a internet. ¡Te voy a robar la investigación y publicarla bajo el nombre de la editorial!&raquo;",
                 "Coges tus cosas y decides salir corriendo en dirección a la Universidad. Allí seguro que tienen conexión a internet. De camino a la universidad, ves que el director de la editorial te va siguiendo por la calle, por lo que decides comenzar a correr hasta llegar al laboratorio en el que trabajas. Nada más cerrar la puerta del laboratorio, decides llamar a Alba, tu mejor amiga:",
                 "Tú:     Hola, el tirano me ha cortado el acceso a Internet y no puedo acceder a mis documentos, ¿me puedes ayudar?",
                 "Alba:   Sí, ¿qué puedo hacer por ti?",

@@ -63,6 +63,20 @@ function is_auto_scene(scene) {
     }
 }
 
+document.addEventListener('DOMContentLoaded', async () => {
+    let dataList = await load_game();
+    let startButton = document.getElementById('btn-start-game');
+    startButton.addEventListener('click',() => main(dataList));
+})
+
+function generate_action_html(action,sceneId) {
+    return `<span id="${sceneId}-${action}" data-action="${action}" class="action-text">${action}</span>`;
+}
+
+function generate_action_input(sceneId) {
+    return `<form action="" id="text-input-form"><input id="text-input-${sceneId}" class="game-text-input" type="text"><button type="submit" class="submit-text-input">Enviar</button></form>`;
+}
+
 async function load_game() {
     const scenes_json = await load_scenes();
     const texts = await load_texts();
@@ -83,23 +97,32 @@ async function load_game() {
     inicioText.insertAdjacentHTML('afterbegin',`<h1 class="cover-text cover-title">${cover['titulo']}</h1>`);
     inicioDiv.insertAdjacentHTML('afterbegin',`<div class="div-cover-img"><img src="${cover['img']}" alt="Portada" class="cover-img"></div>`);
 
+    await load_pictures(scenes);
+
     let res = Array.of(cover,scenes);
 
     return res;
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    let dataList = await load_game();
-    let startButton = document.getElementById('btn-start-game');
-    startButton.addEventListener('click',() => main(dataList));
-})
-
-function generate_action_html(action,sceneId) {
-    return `<span id="${sceneId}-${action}" data-action="${action}" class="action-text">${action}</span>`;
-}
-
-function generate_action_input(sceneId) {
-    return `<form action="" id="text-input-form"><input id="text-input-${sceneId}" class="game-text-input" type="text"><button type="submit" class="submit-text-input">Enviar</button></form>`;
+async function load_pictures(scenes) {
+    let pictureColumn = document.getElementById('picture-col');
+    for (let scene of scenes) {
+        fetch(`.${scene.img}`)
+        .then((response) => {
+            if (!response.ok) {
+                return null;
+            } else {
+                return response.blob();
+            }
+        })
+        .then((image) => {
+            if (image == null) {
+                return null;
+            } else {
+                pictureColumn.insertAdjacentHTML('beforeend',`<img src="${URL.createObjectURL(image)}" data-scene-id="${scene.id}" class="d-none" alt="">`);
+            }
+        })
+    }
 }
 
 async function main(dataList) {
@@ -116,10 +139,23 @@ async function main(dataList) {
     regenerate_actions();
     
     function render_text(scene) {
+        let currentPicture = document.getElementById('picture-col');
+        console.log(currentPicture.children)
+        for (let child of currentPicture.children) {
+            console.log(child)
+            if (child.dataset.sceneId === scene.id) {
+                child.classList.remove('d-none');
+            } else if (!child.classList.contains('d-none')) {
+                child.classList.add('d-none');
+            }
+        }
+
         textScreen.innerHTML = '';
         for(line of scene.textos) {
             textScreen.insertAdjacentHTML('beforeend',`<p class="text-style game-text">${line}</p>`);
         }
+        document.getElementById('text-col').scrollTo(0,0);
+        gameScreen.scrollTo(0,0);
     }
 
     function handle_user_input(event) {
@@ -138,7 +174,7 @@ async function main(dataList) {
             let error = document.getElementById('id-error-text');
             if (!error) {
                 let inputForm = document.getElementById('text-input-form');
-                inputForm.insertAdjacentHTML('beforeend',`<span id="id-error-text" class="form-error">${currentScene.error}</span>`);
+                inputForm.insertAdjacentHTML('afterbegin',`<span id="id-error-text" class="form-error">${currentScene.error}</span>`);
             }
         }
     }
