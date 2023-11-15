@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Room BUS</title>
+    <meta name="description" content="Juego interactivo tipo Escape Room para dar a conocer algunos de los aspectos más importeantes de la Biblioteca de la Universidad de Sevilla.">
+    <link rel="stylesheet" href="./css/estilo.css" type="text/css">
+    <link rel="stylesheet" href="./css/book_game.css" type="text/css">
+</head>
+<body>
+    <header>
+        <section>
+            <div class="barra_roja"></div>
+            <div id="header-contenedor" class="contenedor">
+                <div class="columna" id="logo">
+                    <img src="assets/img/webBUS/logo.png" alt="Logo de la BUS">
+                </div>
+                <div class="columna" id="principal">
+                    <div class="contenedor">
+                        <div class="columna_encabezado">
+                            <img src="assets/img/webBUS/icon_1.png" alt="Logo de la BUS" width="24" height="22">
+                            <div class="cartelitos"> EXPON@us.es</div>
+                        </div>
+                        <div class="columna_encabezado">
+                            <img src="assets/img/webBUS/icon_1.png" alt="Logo de la BUS"width="24" height="22">
+                            <div class="cartelitos"> Contacto</div>
+                        </div>
+                        <div class="columna_encabezado">
+                            <img src="assets/img/webBUS/icon_2.png" alt="Logo de la BUS"width="22" height="22">
+                            <div class="cartelitos"> Horarios</div>
+                        </div>
+                        <div class="columna_encabezado">
+                            <img src="assets/img/webBUS/icon_3.png" alt="Logo de la BUS"width="22" height="22">
+                            <div class="cartelitos"> Ayuda</div>
+                        </div>
+                        <div class="columna_encabezado">
+                            <div class="cambio_idioma_english">English</div>
+                            <div class="cambio_idioma_espanol">Español</div>
+                        </div>
+                        <div class="columna_encabezado">
+                            <div class="columna_lupa">
+                                <input class="barra_busqueda"/>
+                                <img src="assets/img/webBUS/icon_4.png" alt="Logo de la BUS" id="lupa">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenedor" id="segundo">
+                        <div class="columna_encabezado">
+                            <div class="cartelitos_abajo">BUSCA Y ENCUENTRA</div>
+                        </div>
+                        <div class="columna_encabezado">
+                            <div class="cartelitos_abajo">BIBLIOTECAS Y HORARIOS</div>
+                        </div>
+                        <div class="columna_encabezado">
+                            <div class="cartelitos_abajo">UTILIZA LA BIBLIOTECA</div>
+                        </div>
+                        <div class="columna_encabezado">
+                            <div class="cartelitos_abajo">ESTUDIA E INVESTIGA</div>
+                        </div>
+                        <div class="columna_encabezado">
+                            <div class="cartelitos_abajo">CONÓCENOS</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="barra_amarilla">
+                <div class="cuadrado_amarillo"><img src="assets/img/webBUS/icon_5.png" alt="Casita" width="30" height="30">> Escape Room BUS</div>
+                </div>
+                <div class="barra_clarita">
+                    <div class="cuadrado_clarito">Mi cuenta</div>
+                </div>
+                <div class="barra_oscurita">
+                </div>
+            </div>
+            
+        </section>
+    </header>
+
+    <div id="main-contenedor">
+        <div id="principal-game" class="main-columna">
+            <h2>Escape Room BUS: Juego</h2>
+
+                <!------------------------------------- AQUÍ EMPIEZA EL JUEGO ------------------------------------->
+                <div id="game-bg-wrapper" class="game-border">
+                    <div id="game" class="game-bg d-none game-border">
+                        <div id="picture-col" class="game-col">
+                        </div>
+                        <div id="text-col" class="game-col">
+                            <div id="scene-text">
+                            </div>
+                            <div id="action-selectors">
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div id="game-input-div">
+                        <span class="text-style">&gt;</span>
+                        <input type="text" name="game-input" id="game-input" class="game-input text-style">
+                    </div>
+                    -->
+                    <div id="inicio-juego">
+                        <div id="inicio-texto">
+                            <button id="btn-start-game" class="boton-bonito">Comenzar</button>
+                        </div>
+                    </div>
+                    <div id="fin-juego" class="d-none">
+                        <button class="boton-bonito" onclick="main()">Ver historia</button>
+                        <button class="boton-bonito" onclick="main()">Descargar PDF</button>
+                    </div>
+                </div>
+                <script src="./js/main.js"  type="text/javascript"></script>
+                <!------------------------------------- AQUÍ TERMINA EL JUEGO ------------------------------------->
+            </div>
+            <div id="lateral" class="main-columna">
+                <img src="assets/img/webBUS/lateral.png" alt="Lateral de la web BUS">
+            </div>
+        </div>
+    
+        <footer>
+            <p>&copy; 2023 Becarios de la BUS: Álvaro, Gonzalo y Patricia</p>
+        </footer>
+    </body>
+    </html>

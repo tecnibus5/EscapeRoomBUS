@@ -41,6 +41,7 @@ body, html {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 50%;
+    max-height: 100%;
     aspect-ratio: 1;
     mix-blend-mode: multiply;
 }
@@ -187,7 +188,6 @@ form {
 }
 
 .game-text-input {
-    height: 36px;
     flex-grow: 3;
     border-width: 1px 0 1px 1px;
     border-color: #dddddd;
@@ -214,12 +214,14 @@ form {
 }
 
 .submit-text-input:hover {
+    height: 36px;
     transition-duration: 0.4s;
     transform: translate(-4px,-4px);
     box-shadow: 4px 4px 0 #333333;
 }
 
 .submit-text-input:active {
+    height: 36px;
     transition-duration: 0.4s;
     transform: translate(0,0);
     box-shadow: 0 0 0 #333333;
