@@ -148,11 +148,11 @@ body, html {
 }
 
 #game * {
-    font-family: 'typewriter', 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: clamp(1em,10vw,1.05em);
 }
 .boton-bonito {
-    font-family: 'typewriter', 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: clamp(1.1em,10vw,1.2em);
 }
 
