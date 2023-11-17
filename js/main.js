@@ -1,3 +1,4 @@
+"use strict";
 // Carga de ficheros
 
 async function load_scenes() {
@@ -91,7 +92,7 @@ async function load_game() {
     const cover = scenes_json['portada'];
     const scenes = scenes_json['escenas'];
 
-    let inicioDiv = document.getElementById('inicio-juego');
+    let inicioDiv = document.getElementById('portada');
     let inicioText = document.getElementById('inicio-texto');
 
     // Add cover image, text and start button
@@ -130,7 +131,7 @@ async function load_pictures(scenes) {
 
 async function main(dataList) {
     let scenes = dataList[1];
-    document.getElementById('inicio-juego').remove();
+    document.getElementById('portada').remove();
     let bookSeparator = document.getElementById('book-separator');
     bookSeparator.classList.remove('d-none');
 
@@ -145,9 +146,7 @@ async function main(dataList) {
     
     function render_text(scene) {
         let currentPicture = document.getElementById('picture-col');
-        console.log(currentPicture.children)
         for (let child of currentPicture.children) {
-            console.log(child)
             if (child.dataset.sceneId === scene.id) {
                 child.classList.remove('d-none');
             } else if (!child.classList.contains('d-none')) {
@@ -156,7 +155,7 @@ async function main(dataList) {
         }
 
         textScreen.innerHTML = '';
-        for(line of scene.textos) {
+        for(let line of scene.textos) {
             textScreen.insertAdjacentHTML('beforeend',`<p class="text-style game-text">${line}</p>`);
         }
         document.getElementById('text-col').scrollTo(0,0);

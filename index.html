@@ -11,32 +11,30 @@
 </head>
 
 <body>
-    <div id="resizable-div" style="resize: both;">
-        <div id="game-bg-wrapper" class="game-border">
-            <div id="book-separator"></div>
-            <div id="game" class="game-bg d-none game-border">
-                <div id="picture-col" class="game-col">
-                </div>
-                <div id="text-col" class="game-col">
-                    <div id="scene-text">
-                    </div>
-                    <div id="action-selectors">
-                        <hr>
-                    </div>
-                </div>
-            </div>
-            <div id="inicio-juego">
-                <div id="inicio-texto">
-                    <button id="btn-start-game" class="boton-bonito">Comenzar</button>
-                </div>
-            </div>
-            <div id="fin-juego" class="d-none">
-                <button class="boton-bonito" onclick="main()">Ver historia</button>
-                <button class="boton-bonito" onclick="main()">Descargar PDF</button>
+    <div id="game-bg-wrapper">
+        <div id="portada">
+            <div id="inicio-texto">
+                <button id="btn-start-game" class="boton-bonito">Comenzar</button>
             </div>
         </div>
-        <script src="./js/main.js" type="text/javascript"></script>
+        <div id="book-separator"><!-- Quitar y añadir sombra al div derecho --></div>
+        <div id="game" class="game-bg d-none game-border">
+            <div id="picture-col" class="game-col">
+            </div>
+            <div id="text-col" class="game-col">
+                <div id="scene-text">
+                </div>
+                <div id="action-selectors">
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div id="fin-juego" class="d-none">
+            <button class="boton-bonito" onclick="main()">Ver historia</button>
+            <button class="boton-bonito" onclick="main()">Descargar PDF</button>
+        </div>
     </div>
+    <script src="./js/main.js" type="text/javascript"></script>
 </body>
 
 </html>

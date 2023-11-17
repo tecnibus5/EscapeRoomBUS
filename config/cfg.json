@@ -1,6 +1,6 @@
 {
     "portada": {
-        "titulo": "La gran aventura",
+        "titulo": "Publicar un trabajo de investigación es algo muy complicado hoy en día",
         "autores": "Patricia, Gonzalo y Álvaro",
         "img": "../assets/img/game/portada.png"
     },
@@ -362,7 +362,7 @@
                 "Alba:   ¡¡¡Habla más fuerte, que no te oigo!!!",
                 "Acabo de entrar al laboratorio y tengo al tirano dando golpes en la puerta queriendo entrar, ¡no quiero que me escuche!. Necesito que te pongas en contacto con la Universidad de Sevilla para que nos asesoren en temas de publicación en abierto, propiedad intelectual, licencias Creative Commons, etc., para poder compartir mi investigación y generar mayor impacto en la sociedad.",
                 "Alba:   Vale, dame 2 minutos que me  ponga en contacto con ellos y ahora te devuelvo la llamada.",
-                "¿Con qué servicio de la <a href='https://www.us.es'>Universidad de Sevilla</a> tendrá Alba que ponerse en contacto?"
+                "¿Con qué servicio de la <a href='https://www.us.es' target='_blank'>Universidad de Sevilla</a> tendrá Alba que ponerse en contacto?"
             ],
             "acciones": {
                 "BIBLIOTECA": "12",
@@ -382,7 +382,7 @@
                 "A los pocos minutos recibes una llamada a tu teléfono: es Alba, que ya ha hablado con la Biblioteca de la Universdad de Sevilla y ha recibido toda la información que necesitas.",
                 "Alba:   En su web tienen disponible mucha información para investigar y publicar, tienen un grupo de apoyo a la investigación, un grupo de Ciencia Abierta y un grupo de gestión de datos de investigación. Te envío por mensaje la URL de la página que debes consultar. ¡Mucha suerte!",
                 "Acto seguido finaliza la llamada telefónica y recibes en tu teléfono la dirección URL de la web donde encontrarás toda la información que necesitas: https://idus.us.es/",
-                "¿Cuántas comunidades diferentes podemos encontrar en <a href='https://idus.us.es/'>idUS</a>?"
+                "¿Cuántas comunidades diferentes podemos encontrar en <a href='https://idus.us.es/' target='_blank'>idUS</a>?"
             ],
             "acciones": {
                 "6": "13",
